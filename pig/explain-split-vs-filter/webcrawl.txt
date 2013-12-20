@@ -1,0 +1,2 @@
+http://pig.apache.org	1	{(http://pig.apache.org/index.html),(http://pig.apache.org/releases.html),(http://pig.apache.org/about.html),(http://pig.apache.org/mailing_lists.html),(http://pig.apache.org/whoweare.html),(http://pig.apache.org/bylaws.html),(http://pig.apache.org/privacypolicy.html),(http://pig.apache.org/issue_tracking.html),(http://pig.apache.org/version_control.html),(http://pig.apache.org/philosophy.html)}
+http://pig.apache.org/index.html	1	{}
