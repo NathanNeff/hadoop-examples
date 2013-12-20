@@ -11,6 +11,10 @@ Hive and Pig
 ------------
 12/20/2013 
 
+- Incremental insert example in Hive
+  Inserts non-duplicate data into a join table from incrementally updated source tables
+  See hive/incremental_insert/
+
 - Added example of Pig's EXPLAIN command to show a diagram of the execution plan
              for SPLIT versus FILTER
   See pig/explain-split-vs-filter/
