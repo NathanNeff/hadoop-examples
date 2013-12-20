@@ -1,0 +1,6 @@
+USE db1;
+SHOW PARTITIONS employees_partitioned;
+
+EXPLAIN EXTENDED 
+SELECT name FROM EMPLOYEES
+WHERE state = 'MO';
