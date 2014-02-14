@@ -11,9 +11,14 @@ for i in 1 2 3 4 5 6 7 8 9 10 11 12 13 14 15 16 17 18 19 20;do
         hadoop fs -touchz $INPUT_DIR/$i
 done
 
-hadoop jar $STREAMING_JAR \
--Dmapred.reduce.tasks=0 \
--input $INPUT_DIR 
--output $OUTPUT_DIR \
--mapper mapper.pl 
--file mapper.pl
+for j in 1 2 3 4
+do
+    echo "Starting job $j"
+    hadoop jar $STREAMING_JAR \
+    -Dmapred.reduce.tasks=0 \
+    -input $INPUT_DIR \
+    -output $OUTPUT_DIR \
+    -mapper mapper.pl \
+    -file mapper.pl \
+    -Dmapred.job.name=Random_Crash_$j &
+done
