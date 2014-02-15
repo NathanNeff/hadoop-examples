@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<allocations>
+	<pool name="boss">
+		<minMaps>8</minMaps>
+		<minReduces>3</minReduces>
+		<schedulingMode>FIFO</schedulingMode>
+		<minSharePreemptionTimeout>30</minSharePreemptionTimeout>
+	</pool>
+	<pool name="something">
+		
+	</pool>
+	<defaultMinSharePreemptionTimeout>60</defaultMinSharePreemptionTimeout>
+</allocations>                
