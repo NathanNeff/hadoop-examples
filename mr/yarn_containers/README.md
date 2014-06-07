@@ -2,6 +2,7 @@ These are the properties that I had to change/verify to make sure
 that NodeManagers could allocate, for example 8 containers for
 512 MB maps, and 4 containers for 1024 MB maps
 
+```xml
 <property>
         <name>yarn.nodemanager.resource.memory-mb</name>
         <value>4096</value>
@@ -19,6 +20,7 @@ that NodeManagers could allocate, for example 8 containers for
         <value>8</value>
         <source>yarn-site.xml</source>
 </property>
+```
 
 Also, you can set
 
