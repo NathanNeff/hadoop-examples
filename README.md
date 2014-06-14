@@ -7,6 +7,15 @@ tools like Hive and Pig.
 Release Notes
 =============
 
+Streaming Config Dumper
+-----------------------
+
+MapReduce scripts to print their ENV variables, which also include
+Hadoop configuration stuff for streaming jobs.
+
+See =mr/streaming_config_dumper/=
+
+
 Hive and Pig
 ------------
 12/20/2013 
@@ -21,4 +30,6 @@ Hive and Pig
 
 - Added example of Hive's PARTITION feature
   See hive/partition-example/
+
+
 
