@@ -1,0 +1,2520 @@
+CONSOLETYPE	 vt
+ vt	
+ vt	
+ vt	
+ vt	
+	
+HADOOP_CLIENT_OPTS	-Dhadoop.tasklog.taskid=attempt_201303301958_0009_m_000002_0 -Dhadoop.tasklog.iscleanup=false -Dhadoop.tasklog.totalLogFileSize=0
+ -Dhadoop.tasklog.taskid=attempt_201303301958_0009_m_000003_0 -Dhadoop.tasklog.iscleanup=false -Dhadoop.tasklog.totalLogFileSize=0	
+ -Dhadoop.tasklog.taskid=attempt_201303301958_0009_m_000000_0 -Dhadoop.tasklog.iscleanup=false -Dhadoop.tasklog.totalLogFileSize=0	
+ -Dhadoop.tasklog.taskid=attempt_201303301958_0009_m_000001_0 -Dhadoop.tasklog.iscleanup=false -Dhadoop.tasklog.totalLogFileSize=0	
+ -Dhadoop.tasklog.taskid=attempt_201303301958_0009_m_000004_0 -Dhadoop.tasklog.iscleanup=false -Dhadoop.tasklog.totalLogFileSize=0	
+	
+HADOOP_CONF_DIR	/etc/hadoop/conf
+ /etc/hadoop/conf	
+ /etc/hadoop/conf	
+ /etc/hadoop/conf	
+ /etc/hadoop/conf	
+	
+HADOOP_HEAPSIZE	200
+ 200	
+ 200	
+ 200	
+ 200	
+	
+HADOOP_HOME	/usr/lib/hadoop-0.20-mapreduce
+ /usr/lib/hadoop-0.20-mapreduce	
+ /usr/lib/hadoop-0.20-mapreduce	
+ /usr/lib/hadoop-0.20-mapreduce	
+ /usr/lib/hadoop-0.20-mapreduce	
+	
+HADOOP_IDENT_STRING	hadoop
+ hadoop	
+ hadoop	
+ hadoop	
+ hadoop	
+	
+HADOOP_JOBTRACKER_USER	mapred
+ mapred	
+ mapred	
+ mapred	
+ mapred	
+	
+HADOOP_LIBEXEC_DIR	/usr/lib/hadoop/libexec
+ /usr/lib/hadoop/libexec	
+ /usr/lib/hadoop/libexec	
+ /usr/lib/hadoop/libexec	
+ /usr/lib/hadoop/libexec	
+	
+HADOOP_LOGFILE	hadoop-hadoop-tasktracker-localhost.localdomain.log
+ hadoop-hadoop-tasktracker-localhost.localdomain.log	
+ hadoop-hadoop-tasktracker-localhost.localdomain.log	
+ hadoop-hadoop-tasktracker-localhost.localdomain.log	
+ hadoop-hadoop-tasktracker-localhost.localdomain.log	
+	
+HADOOP_LOG_DIR	/var/log/hadoop-0.20-mapreduce
+ /var/log/hadoop-0.20-mapreduce	
+ /var/log/hadoop-0.20-mapreduce	
+ /var/log/hadoop-0.20-mapreduce	
+ /var/log/hadoop-0.20-mapreduce	
+	
+HADOOP_MAPRED_HOME	/usr/lib/hadoop-0.20-mapreduce
+ /usr/lib/hadoop-0.20-mapreduce	
+ /usr/lib/hadoop-0.20-mapreduce	
+ /usr/lib/hadoop-0.20-mapreduce	
+ /usr/lib/hadoop-0.20-mapreduce	
+	
+HADOOP_NICENESS	0
+ 0	
+ 0	
+ 0	
+ 0	
+	
+HADOOP_PID_DIR	/var/run/hadoop-0.20-mapreduce
+ /var/run/hadoop-0.20-mapreduce	
+ /var/run/hadoop-0.20-mapreduce	
+ /var/run/hadoop-0.20-mapreduce	
+ /var/run/hadoop-0.20-mapreduce	
+	
+HADOOP_ROOT_LOGGER	INFO,TLA
+ INFO,TLA	
+ INFO,TLA	
+ INFO,TLA	
+ INFO,TLA	
+	
+HADOOP_SECURITY_LOGGER	INFO,DRFAS
+ INFO,DRFAS	
+ INFO,DRFAS	
+ INFO,DRFAS	
+ INFO,DRFAS	
+	
+HADOOP_TASKTRACKER_USER	mapred
+ mapred	
+ mapred	
+ mapred	
+ mapred	
+	
+HADOOP_TOKEN_FILE_LOCATION	/var/lib/hadoop-hdfs/cache/mapred/mapred/local/taskTracker/training/jobcache/job_201303301958_0009/jobToken
+ /var/lib/hadoop-hdfs/cache/mapred/mapred/local/taskTracker/training/jobcache/job_201303301958_0009/jobToken	
+ /var/lib/hadoop-hdfs/cache/mapred/mapred/local/taskTracker/training/jobcache/job_201303301958_0009/jobToken	
+ /var/lib/hadoop-hdfs/cache/mapred/mapred/local/taskTracker/training/jobcache/job_201303301958_0009/jobToken	
+ /var/lib/hadoop-hdfs/cache/mapred/mapred/local/taskTracker/training/jobcache/job_201303301958_0009/jobToken	
+	
+HADOOP_WORK_DIR	/var/lib/hadoop-hdfs/cache/mapred/mapred/local/taskTracker/training/jobcache/job_201303301958_0009/attempt_201303301958_0009_m_000004_0/work
+ /var/lib/hadoop-hdfs/cache/mapred/mapred/local/taskTracker/training/jobcache/job_201303301958_0009/attempt_201303301958_0009_m_000000_0/work	
+ /var/lib/hadoop-hdfs/cache/mapred/mapred/local/taskTracker/training/jobcache/job_201303301958_0009/attempt_201303301958_0009_m_000002_0/work	
+ /var/lib/hadoop-hdfs/cache/mapred/mapred/local/taskTracker/training/jobcache/job_201303301958_0009/attempt_201303301958_0009_m_000003_0/work	
+ /var/lib/hadoop-hdfs/cache/mapred/mapred/local/taskTracker/training/jobcache/job_201303301958_0009/attempt_201303301958_0009_m_000001_0/work	
+	
+HOME	/usr/lib/hadoop-0.20-mapreduce
+ /usr/lib/hadoop-0.20-mapreduce	
+ /usr/lib/hadoop-0.20-mapreduce	
+ /usr/lib/hadoop-0.20-mapreduce	
+ /usr/lib/hadoop-0.20-mapreduce	
+	
+JAVA_HOME	/usr/java/jdk1.6.0_31
+ /usr/java/jdk1.6.0_31	
+ /usr/java/jdk1.6.0_31	
+ /usr/java/jdk1.6.0_31	
+ /usr/java/jdk1.6.0_31	
+	
+JVM_PID	2870
+ 2871	
+ 3006	
+ 3182	
+ 3001	
+	
+LANG	en_US.UTF-8
+ en_US.UTF-8	
+ en_US.UTF-8	
+ en_US.UTF-8	
+ en_US.UTF-8	
+	
+LANGSH_SOURCED	1
+ 1	
+ 1	
+ 1	
+ 1	
+	
+LD_LIBRARY_PATH	/usr/java/jdk1.6.0_31/jre/lib/i386/client:/usr/java/jdk1.6.0_31/jre/lib/i386:/usr/java/jdk1.6.0_31/jre/../lib/i386:/var/lib/hadoop-hdfs/cache/mapred/mapred/local/taskTracker/training/jobcache/job_201303301958_0009/attempt_201303301958_0009_m_000001_0/work:/usr/java/jdk1.6.0_31/jre/lib/i386/client:/usr/java/jdk1.6.0_31/jre/lib/i386:/usr/java/jdk1.6.0_31/jre/../lib/i386::/usr/lib/hadoop-0.20-mapreduce/lib/native/Linux-i386-32
+ /usr/java/jdk1.6.0_31/jre/lib/i386/client:/usr/java/jdk1.6.0_31/jre/lib/i386:/usr/java/jdk1.6.0_31/jre/../lib/i386:/var/lib/hadoop-hdfs/cache/mapred/mapred/local/taskTracker/training/jobcache/job_201303301958_0009/attempt_201303301958_0009_m_000002_0/work:/usr/java/jdk1.6.0_31/jre/lib/i386/client:/usr/java/jdk1.6.0_31/jre/lib/i386:/usr/java/jdk1.6.0_31/jre/../lib/i386::/usr/lib/hadoop-0.20-mapreduce/lib/native/Linux-i386-32	
+ /usr/java/jdk1.6.0_31/jre/lib/i386/client:/usr/java/jdk1.6.0_31/jre/lib/i386:/usr/java/jdk1.6.0_31/jre/../lib/i386:/var/lib/hadoop-hdfs/cache/mapred/mapred/local/taskTracker/training/jobcache/job_201303301958_0009/attempt_201303301958_0009_m_000004_0/work:/usr/java/jdk1.6.0_31/jre/lib/i386/client:/usr/java/jdk1.6.0_31/jre/lib/i386:/usr/java/jdk1.6.0_31/jre/../lib/i386::/usr/lib/hadoop-0.20-mapreduce/lib/native/Linux-i386-32	
+ /usr/java/jdk1.6.0_31/jre/lib/i386/client:/usr/java/jdk1.6.0_31/jre/lib/i386:/usr/java/jdk1.6.0_31/jre/../lib/i386:/var/lib/hadoop-hdfs/cache/mapred/mapred/local/taskTracker/training/jobcache/job_201303301958_0009/attempt_201303301958_0009_m_000000_0/work:/usr/java/jdk1.6.0_31/jre/lib/i386/client:/usr/java/jdk1.6.0_31/jre/lib/i386:/usr/java/jdk1.6.0_31/jre/../lib/i386::/usr/lib/hadoop-0.20-mapreduce/lib/native/Linux-i386-32	
+ /usr/java/jdk1.6.0_31/jre/lib/i386/client:/usr/java/jdk1.6.0_31/jre/lib/i386:/usr/java/jdk1.6.0_31/jre/../lib/i386:/var/lib/hadoop-hdfs/cache/mapred/mapred/local/taskTracker/training/jobcache/job_201303301958_0009/attempt_201303301958_0009_m_000003_0/work:/usr/java/jdk1.6.0_31/jre/lib/i386/client:/usr/java/jdk1.6.0_31/jre/lib/i386:/usr/java/jdk1.6.0_31/jre/../lib/i386::/usr/lib/hadoop-0.20-mapreduce/lib/native/Linux-i386-32	
+	
+LOGNAME	mapred
+ mapred	
+ mapred	
+ mapred	
+ mapred	
+	
+MALLOC_ARENA_MAX	4
+ 4	
+ 4	
+ 4	
+ 4	
+	
+NLSPATH	/usr/dt/lib/nls/msg/%L/%N.cat
+ /usr/dt/lib/nls/msg/%L/%N.cat	
+ /usr/dt/lib/nls/msg/%L/%N.cat	
+ /usr/dt/lib/nls/msg/%L/%N.cat	
+ /usr/dt/lib/nls/msg/%L/%N.cat	
+	
+PATH	/sbin:/usr/sbin:/bin:/usr/bin
+ /sbin:/usr/sbin:/bin:/usr/bin	
+ /sbin:/usr/sbin:/bin:/usr/bin	
+ /sbin:/usr/sbin:/bin:/usr/bin	
+ /sbin:/usr/sbin:/bin:/usr/bin	
+	
+PREVLEVEL	N
+ N	
+ N	
+ N	
+ N	
+	
+PWD	/var/lib/hadoop-hdfs/cache/mapred/mapred/local/taskTracker/training/jobcache/job_201303301958_0009/attempt_201303301958_0009_m_000003_0/work
+ /var/lib/hadoop-hdfs/cache/mapred/mapred/local/taskTracker/training/jobcache/job_201303301958_0009/attempt_201303301958_0009_m_000004_0/work	
+ /var/lib/hadoop-hdfs/cache/mapred/mapred/local/taskTracker/training/jobcache/job_201303301958_0009/attempt_201303301958_0009_m_000001_0/work	
+ /var/lib/hadoop-hdfs/cache/mapred/mapred/local/taskTracker/training/jobcache/job_201303301958_0009/attempt_201303301958_0009_m_000002_0/work	
+ /var/lib/hadoop-hdfs/cache/mapred/mapred/local/taskTracker/training/jobcache/job_201303301958_0009/attempt_201303301958_0009_m_000000_0/work	
+	
+RUNLEVEL	5
+ 5	
+ 5	
+ 5	
+ 5	
+	
+SHELL	/usr/java/jdk1.6.0_31/bin/java
+ /usr/java/jdk1.6.0_31/bin/java	
+ /usr/java/jdk1.6.0_31/bin/java	
+ /usr/java/jdk1.6.0_31/bin/java	
+ /usr/java/jdk1.6.0_31/bin/java	
+	
+SHLVL	5
+ 5	
+ 5	
+ 5	
+ 5	
+	
+TERM	linux
+ linux	
+ linux	
+ linux	
+ linux	
+	
+TMPDIR	/var/lib/hadoop-hdfs/cache/mapred/mapred/local/taskTracker/training/jobcache/job_201303301958_0009/attempt_201303301958_0009_m_000003_0/work/tmp
+ /var/lib/hadoop-hdfs/cache/mapred/mapred/local/taskTracker/training/jobcache/job_201303301958_0009/attempt_201303301958_0009_m_000004_0/work/tmp	
+ /var/lib/hadoop-hdfs/cache/mapred/mapred/local/taskTracker/training/jobcache/job_201303301958_0009/attempt_201303301958_0009_m_000001_0/work/tmp	
+ /var/lib/hadoop-hdfs/cache/mapred/mapred/local/taskTracker/training/jobcache/job_201303301958_0009/attempt_201303301958_0009_m_000002_0/work/tmp	
+ /var/lib/hadoop-hdfs/cache/mapred/mapred/local/taskTracker/training/jobcache/job_201303301958_0009/attempt_201303301958_0009_m_000000_0/work/tmp	
+	
+UPSTART_EVENTS	runlevel
+ runlevel	
+ runlevel	
+ runlevel	
+ runlevel	
+	
+UPSTART_INSTANCE	
+ 	
+ 	
+ 	
+ 	
+	
+UPSTART_JOB	rc
+ rc	
+ rc	
+ rc	
+ rc	
+	
+USER	mapred
+ mapred	
+ mapred	
+ mapred	
+ mapred	
+	
+XFILESEARCHPATH	/usr/dt/app-defaults/%L/Dt
+ /usr/dt/app-defaults/%L/Dt	
+ /usr/dt/app-defaults/%L/Dt	
+ /usr/dt/app-defaults/%L/Dt	
+ /usr/dt/app-defaults/%L/Dt	
+	
+_HADOOP_DAEMON_OUT	/var/log/hadoop-0.20-mapreduce/hadoop-hadoop-tasktracker-localhost.localdomain.out
+ /var/log/hadoop-0.20-mapreduce/hadoop-hadoop-tasktracker-localhost.localdomain.out	
+ /var/log/hadoop-0.20-mapreduce/hadoop-hadoop-tasktracker-localhost.localdomain.out	
+ /var/log/hadoop-0.20-mapreduce/hadoop-hadoop-tasktracker-localhost.localdomain.out	
+ /var/log/hadoop-0.20-mapreduce/hadoop-hadoop-tasktracker-localhost.localdomain.out	
+	
+_HADOOP_DAEMON_PIDFILE	/var/run/hadoop-0.20-mapreduce/hadoop-hadoop-tasktracker.pid
+ /var/run/hadoop-0.20-mapreduce/hadoop-hadoop-tasktracker.pid	
+ /var/run/hadoop-0.20-mapreduce/hadoop-hadoop-tasktracker.pid	
+ /var/run/hadoop-0.20-mapreduce/hadoop-hadoop-tasktracker.pid	
+ /var/run/hadoop-0.20-mapreduce/hadoop-hadoop-tasktracker.pid	
+	
+dfs_block_access_key_update_interval	600
+ 600	
+ 600	
+ 600	
+ 600	
+	
+dfs_block_access_token_enable	false
+ false	
+ false	
+ false	
+ false	
+	
+dfs_block_access_token_lifetime	600
+ 600	
+ 600	
+ 600	
+ 600	
+	
+dfs_blockreport_initialDelay	0
+ 0	
+ 0	
+ 0	
+ 0	
+	
+dfs_blockreport_intervalMsec	21600000
+ 21600000	
+ 21600000	
+ 21600000	
+ 21600000	
+	
+dfs_blocksize	67108864
+ 67108864	
+ 67108864	
+ 67108864	
+ 67108864	
+	
+dfs_bytes_per_checksum	512
+ 512	
+ 512	
+ 512	
+ 512	
+	
+dfs_client_block_write_replace_datanode_on_failure_enable	true
+ true	
+ true	
+ true	
+ true	
+	
+dfs_client_block_write_replace_datanode_on_failure_policy	DEFAULT
+ DEFAULT	
+ DEFAULT	
+ DEFAULT	
+ DEFAULT	
+	
+dfs_client_block_write_retries	3
+ 3	
+ 3	
+ 3	
+ 3	
+	
+dfs_client_failover_connection_retries	0
+ 0	
+ 0	
+ 0	
+ 0	
+	
+dfs_client_failover_connection_retries_on_timeouts	0
+ 0	
+ 0	
+ 0	
+ 0	
+	
+dfs_client_failover_max_attempts	15
+ 15	
+ 15	
+ 15	
+ 15	
+	
+dfs_client_failover_sleep_base_millis	500
+ 500	
+ 500	
+ 500	
+ 500	
+	
+dfs_client_failover_sleep_max_millis	15000
+ 15000	
+ 15000	
+ 15000	
+ 15000	
+	
+dfs_client_file_block_storage_locations_num_threads	10
+ 10	
+ 10	
+ 10	
+ 10	
+	
+dfs_client_file_block_storage_locations_timeout	60
+ 60	
+ 60	
+ 60	
+ 60	
+	
+dfs_client_https_keystore_resource	ssl-client.xml
+ ssl-client.xml	
+ ssl-client.xml	
+ ssl-client.xml	
+ ssl-client.xml	
+	
+dfs_client_https_need_auth	false
+ false	
+ false	
+ false	
+ false	
+	
+dfs_client_use_datanode_hostname	false
+ false	
+ false	
+ false	
+ false	
+	
+dfs_client_write_packet_size	65536
+ 65536	
+ 65536	
+ 65536	
+ 65536	
+	
+dfs_datanode_address	0.0.0.0:50010
+ 0.0.0.0:50010	
+ 0.0.0.0:50010	
+ 0.0.0.0:50010	
+ 0.0.0.0:50010	
+	
+dfs_datanode_balance_bandwidthPerSec	1048576
+ 1048576	
+ 1048576	
+ 1048576	
+ 1048576	
+	
+dfs_datanode_data_dir	/var/lib/hadoop-hdfs/cache/mapred/dfs/data
+ /var/lib/hadoop-hdfs/cache/mapred/dfs/data	
+ /var/lib/hadoop-hdfs/cache/mapred/dfs/data	
+ /var/lib/hadoop-hdfs/cache/mapred/dfs/data	
+ /var/lib/hadoop-hdfs/cache/mapred/dfs/data	
+	
+dfs_datanode_data_dir_perm	700
+ 700	
+ 700	
+ 700	
+ 700	
+	
+dfs_datanode_directoryscan_interval	21600
+ 21600	
+ 21600	
+ 21600	
+ 21600	
+	
+dfs_datanode_directoryscan_threads	1
+ 1	
+ 1	
+ 1	
+ 1	
+	
+dfs_datanode_dns_interface	default
+ default	
+ default	
+ default	
+ default	
+	
+dfs_datanode_dns_nameserver	default
+ default	
+ default	
+ default	
+ default	
+	
+dfs_datanode_drop_cache_behind_reads	false
+ false	
+ false	
+ false	
+ false	
+	
+dfs_datanode_drop_cache_behind_writes	false
+ false	
+ false	
+ false	
+ false	
+	
+dfs_datanode_du_reserved	0
+ 0	
+ 0	
+ 0	
+ 0	
+	
+dfs_datanode_failed_volumes_tolerated	0
+ 0	
+ 0	
+ 0	
+ 0	
+	
+dfs_datanode_handler_count	10
+ 10	
+ 10	
+ 10	
+ 10	
+	
+dfs_datanode_hdfs_blocks_metadata_enabled	true
+ true	
+ true	
+ true	
+ true	
+	
+dfs_datanode_http_address	0.0.0.0:50075
+ 0.0.0.0:50075	
+ 0.0.0.0:50075	
+ 0.0.0.0:50075	
+ 0.0.0.0:50075	
+	
+dfs_datanode_https_address	0.0.0.0:50475
+ 0.0.0.0:50475	
+ 0.0.0.0:50475	
+ 0.0.0.0:50475	
+ 0.0.0.0:50475	
+	
+dfs_datanode_ipc_address	0.0.0.0:50020
+ 0.0.0.0:50020	
+ 0.0.0.0:50020	
+ 0.0.0.0:50020	
+ 0.0.0.0:50020	
+	
+dfs_datanode_max_transfer_threads	4096
+ 4096	
+ 4096	
+ 4096	
+ 4096	
+	
+dfs_datanode_readahead_bytes	4193404
+ 4193404	
+ 4193404	
+ 4193404	
+ 4193404	
+	
+dfs_datanode_sync_behind_writes	false
+ false	
+ false	
+ false	
+ false	
+	
+dfs_datanode_use_datanode_hostname	false
+ false	
+ false	
+ false	
+ false	
+	
+dfs_default_chunk_view_size	32768
+ 32768	
+ 32768	
+ 32768	
+ 32768	
+	
+dfs_encrypt_data_transfer	false
+ false	
+ false	
+ false	
+ false	
+	
+dfs_ha_automatic_failover_enabled	false
+ false	
+ false	
+ false	
+ false	
+	
+dfs_ha_fencing_ssh_connect_timeout	30000
+ 30000	
+ 30000	
+ 30000	
+ 30000	
+	
+dfs_ha_log_roll_period	120
+ 120	
+ 120	
+ 120	
+ 120	
+	
+dfs_ha_tail_edits_period	60
+ 60	
+ 60	
+ 60	
+ 60	
+	
+dfs_heartbeat_interval	3
+ 3	
+ 3	
+ 3	
+ 3	
+	
+dfs_https_enable	false
+ false	
+ false	
+ false	
+ false	
+	
+dfs_https_server_keystore_resource	ssl-server.xml
+ ssl-server.xml	
+ ssl-server.xml	
+ ssl-server.xml	
+ ssl-server.xml	
+	
+dfs_image_compress	false
+ false	
+ false	
+ false	
+ false	
+	
+dfs_image_compression_codec	org.apache.hadoop.io.compress.DefaultCodec
+ org.apache.hadoop.io.compress.DefaultCodec	
+ org.apache.hadoop.io.compress.DefaultCodec	
+ org.apache.hadoop.io.compress.DefaultCodec	
+ org.apache.hadoop.io.compress.DefaultCodec	
+	
+dfs_image_transfer_bandwidthPerSec	0
+ 0	
+ 0	
+ 0	
+ 0	
+	
+dfs_journalnode_http_address	0.0.0.0:8480
+ 0.0.0.0:8480	
+ 0.0.0.0:8480	
+ 0.0.0.0:8480	
+ 0.0.0.0:8480	
+	
+dfs_journalnode_rpc_address	0.0.0.0:8485
+ 0.0.0.0:8485	
+ 0.0.0.0:8485	
+ 0.0.0.0:8485	
+ 0.0.0.0:8485	
+	
+dfs_namenode_accesstime_precision	3600000
+ 3600000	
+ 3600000	
+ 3600000	
+ 3600000	
+	
+dfs_namenode_backup_address	0.0.0.0:50100
+ 0.0.0.0:50100	
+ 0.0.0.0:50100	
+ 0.0.0.0:50100	
+ 0.0.0.0:50100	
+	
+dfs_namenode_backup_http_address	0.0.0.0:50105
+ 0.0.0.0:50105	
+ 0.0.0.0:50105	
+ 0.0.0.0:50105	
+ 0.0.0.0:50105	
+	
+dfs_namenode_checkpoint_check_period	60
+ 60	
+ 60	
+ 60	
+ 60	
+	
+dfs_namenode_checkpoint_dir	/var/lib/hadoop-hdfs/cache/mapred/dfs/namesecondary
+ /var/lib/hadoop-hdfs/cache/mapred/dfs/namesecondary	
+ /var/lib/hadoop-hdfs/cache/mapred/dfs/namesecondary	
+ /var/lib/hadoop-hdfs/cache/mapred/dfs/namesecondary	
+ /var/lib/hadoop-hdfs/cache/mapred/dfs/namesecondary	
+	
+dfs_namenode_checkpoint_edits_dir	/var/lib/hadoop-hdfs/cache/mapred/dfs/namesecondary
+ /var/lib/hadoop-hdfs/cache/mapred/dfs/namesecondary	
+ /var/lib/hadoop-hdfs/cache/mapred/dfs/namesecondary	
+ /var/lib/hadoop-hdfs/cache/mapred/dfs/namesecondary	
+ /var/lib/hadoop-hdfs/cache/mapred/dfs/namesecondary	
+	
+dfs_namenode_checkpoint_period	3600
+ 3600	
+ 3600	
+ 3600	
+ 3600	
+	
+dfs_namenode_checkpoint_txns	40000
+ 40000	
+ 40000	
+ 40000	
+ 40000	
+	
+dfs_namenode_decommission_interval	30
+ 30	
+ 30	
+ 30	
+ 30	
+	
+dfs_namenode_decommission_nodes_per_interval	5
+ 5	
+ 5	
+ 5	
+ 5	
+	
+dfs_namenode_delegation_key_update_interval	86400000
+ 86400000	
+ 86400000	
+ 86400000	
+ 86400000	
+	
+dfs_namenode_delegation_token_max_lifetime	604800000
+ 604800000	
+ 604800000	
+ 604800000	
+ 604800000	
+	
+dfs_namenode_delegation_token_renew_interval	86400000
+ 86400000	
+ 86400000	
+ 86400000	
+ 86400000	
+	
+dfs_namenode_edits_dir	/var/lib/hadoop-hdfs/cache/mapred/dfs/name
+ /var/lib/hadoop-hdfs/cache/mapred/dfs/name	
+ /var/lib/hadoop-hdfs/cache/mapred/dfs/name	
+ /var/lib/hadoop-hdfs/cache/mapred/dfs/name	
+ /var/lib/hadoop-hdfs/cache/mapred/dfs/name	
+	
+dfs_namenode_edits_journal_plugin_qjournal	org.apache.hadoop.hdfs.qjournal.client.QuorumJournalManager
+ org.apache.hadoop.hdfs.qjournal.client.QuorumJournalManager	
+ org.apache.hadoop.hdfs.qjournal.client.QuorumJournalManager	
+ org.apache.hadoop.hdfs.qjournal.client.QuorumJournalManager	
+ org.apache.hadoop.hdfs.qjournal.client.QuorumJournalManager	
+	
+dfs_namenode_fs_limits_max_component_length	0
+ 0	
+ 0	
+ 0	
+ 0	
+	
+dfs_namenode_fs_limits_max_directory_items	0
+ 0	
+ 0	
+ 0	
+ 0	
+	
+dfs_namenode_handler_count	10
+ 10	
+ 10	
+ 10	
+ 10	
+	
+dfs_namenode_http_address	0.0.0.0:50070
+ 0.0.0.0:50070	
+ 0.0.0.0:50070	
+ 0.0.0.0:50070	
+ 0.0.0.0:50070	
+	
+dfs_namenode_https_address	0.0.0.0:50470
+ 0.0.0.0:50470	
+ 0.0.0.0:50470	
+ 0.0.0.0:50470	
+ 0.0.0.0:50470	
+	
+dfs_namenode_invalidate_work_pct_per_iteration	0.32f
+ 0.32f	
+ 0.32f	
+ 0.32f	
+ 0.32f	
+	
+dfs_namenode_kerberos_internal_spnego_principal	${dfs.web.authentication.kerberos.principal}
+ ${dfs.web.authentication.kerberos.principal}	
+ ${dfs.web.authentication.kerberos.principal}	
+ ${dfs.web.authentication.kerberos.principal}	
+ ${dfs.web.authentication.kerberos.principal}	
+	
+dfs_namenode_logging_level	info
+ info	
+ info	
+ info	
+ info	
+	
+dfs_namenode_max_objects	0
+ 0	
+ 0	
+ 0	
+ 0	
+	
+dfs_namenode_name_dir	/var/lib/hadoop-hdfs/cache/mapred/dfs/name
+ /var/lib/hadoop-hdfs/cache/mapred/dfs/name	
+ /var/lib/hadoop-hdfs/cache/mapred/dfs/name	
+ /var/lib/hadoop-hdfs/cache/mapred/dfs/name	
+ /var/lib/hadoop-hdfs/cache/mapred/dfs/name	
+	
+dfs_namenode_name_dir_restore	false
+ false	
+ false	
+ false	
+ false	
+	
+dfs_namenode_num_checkpoints_retained	2
+ 2	
+ 2	
+ 2	
+ 2	
+	
+dfs_namenode_num_extra_edits_retained	1000000
+ 1000000	
+ 1000000	
+ 1000000	
+ 1000000	
+	
+dfs_namenode_replication_considerLoad	true
+ true	
+ true	
+ true	
+ true	
+	
+dfs_namenode_replication_interval	3
+ 3	
+ 3	
+ 3	
+ 3	
+	
+dfs_namenode_replication_min	1
+ 1	
+ 1	
+ 1	
+ 1	
+	
+dfs_namenode_replication_work_multiplier_per_iteration	2
+ 2	
+ 2	
+ 2	
+ 2	
+	
+dfs_namenode_safemode_extension	0
+ 0	
+ 0	
+ 0	
+ 0	
+	
+dfs_namenode_safemode_min_datanodes	0
+ 0	
+ 0	
+ 0	
+ 0	
+	
+dfs_namenode_safemode_threshold_pct	0.999f
+ 0.999f	
+ 0.999f	
+ 0.999f	
+ 0.999f	
+	
+dfs_namenode_secondary_http_address	0.0.0.0:50090
+ 0.0.0.0:50090	
+ 0.0.0.0:50090	
+ 0.0.0.0:50090	
+ 0.0.0.0:50090	
+	
+dfs_namenode_support_allow_format	true
+ true	
+ true	
+ true	
+ true	
+	
+dfs_permissions_enabled	false
+ false	
+ false	
+ false	
+ false	
+	
+dfs_permissions_superusergroup	supergroup
+ supergroup	
+ supergroup	
+ supergroup	
+ supergroup	
+	
+dfs_replication	1
+ 1	
+ 1	
+ 1	
+ 1	
+	
+dfs_replication_max	512
+ 512	
+ 512	
+ 512	
+ 512	
+	
+dfs_safemode_min_datanodes	1
+ 1	
+ 1	
+ 1	
+ 1	
+	
+dfs_secondary_namenode_kerberos_internal_spnego_principal	${dfs.web.authentication.kerberos.principal}
+ ${dfs.web.authentication.kerberos.principal}	
+ ${dfs.web.authentication.kerberos.principal}	
+ ${dfs.web.authentication.kerberos.principal}	
+ ${dfs.web.authentication.kerberos.principal}	
+	
+dfs_stream_buffer_size	4096
+ 4096	
+ 4096	
+ 4096	
+ 4096	
+	
+dfs_support_append	true
+ true	
+ true	
+ true	
+ true	
+	
+dfs_webhdfs_enabled	true
+ true	
+ true	
+ true	
+ true	
+	
+file_blocksize	67108864
+ 67108864	
+ 67108864	
+ 67108864	
+ 67108864	
+	
+file_bytes_per_checksum	512
+ 512	
+ 512	
+ 512	
+ 512	
+	
+file_client_write_packet_size	65536
+ 65536	
+ 65536	
+ 65536	
+ 65536	
+	
+file_replication	1
+ 1	
+ 1	
+ 1	
+ 1	
+	
+file_stream_buffer_size	4096
+ 4096	
+ 4096	
+ 4096	
+ 4096	
+	
+fs_AbstractFileSystem_file_impl	org.apache.hadoop.fs.local.LocalFs
+ org.apache.hadoop.fs.local.LocalFs	
+ org.apache.hadoop.fs.local.LocalFs	
+ org.apache.hadoop.fs.local.LocalFs	
+ org.apache.hadoop.fs.local.LocalFs	
+	
+fs_AbstractFileSystem_hdfs_impl	org.apache.hadoop.fs.Hdfs
+ org.apache.hadoop.fs.Hdfs	
+ org.apache.hadoop.fs.Hdfs	
+ org.apache.hadoop.fs.Hdfs	
+ org.apache.hadoop.fs.Hdfs	
+	
+fs_AbstractFileSystem_viewfs_impl	org.apache.hadoop.fs.viewfs.ViewFs
+ org.apache.hadoop.fs.viewfs.ViewFs	
+ org.apache.hadoop.fs.viewfs.ViewFs	
+ org.apache.hadoop.fs.viewfs.ViewFs	
+ org.apache.hadoop.fs.viewfs.ViewFs	
+	
+fs_automatic_close	true
+ true	
+ true	
+ true	
+ true	
+	
+fs_defaultFS	hdfs://0.0.0.0:8020
+ hdfs://0.0.0.0:8020	
+ hdfs://0.0.0.0:8020	
+ hdfs://0.0.0.0:8020	
+ hdfs://0.0.0.0:8020	
+	
+fs_df_interval	60000
+ 60000	
+ 60000	
+ 60000	
+ 60000	
+	
+fs_file_impl_disable_cache	false
+ false	
+ false	
+ false	
+ false	
+	
+fs_ftp_host	0.0.0.0
+ 0.0.0.0	
+ 0.0.0.0	
+ 0.0.0.0	
+ 0.0.0.0	
+	
+fs_ftp_host_port	21
+ 21	
+ 21	
+ 21	
+ 21	
+	
+fs_s3_block_size	67108864
+ 67108864	
+ 67108864	
+ 67108864	
+ 67108864	
+	
+fs_s3_buffer_dir	/var/lib/hadoop-hdfs/cache/mapred/s3
+ /var/lib/hadoop-hdfs/cache/mapred/s3	
+ /var/lib/hadoop-hdfs/cache/mapred/s3	
+ /var/lib/hadoop-hdfs/cache/mapred/s3	
+ /var/lib/hadoop-hdfs/cache/mapred/s3	
+	
+fs_s3_maxRetries	4
+ 4	
+ 4	
+ 4	
+ 4	
+	
+fs_s3_sleepTimeSeconds	10
+ 10	
+ 10	
+ 10	
+ 10	
+	
+fs_s3n_block_size	67108864
+ 67108864	
+ 67108864	
+ 67108864	
+ 67108864	
+	
+fs_trash_checkpoint_interval	0
+ 0	
+ 0	
+ 0	
+ 0	
+	
+fs_trash_interval	0
+ 0	
+ 0	
+ 0	
+ 0	
+	
+ftp_blocksize	67108864
+ 67108864	
+ 67108864	
+ 67108864	
+ 67108864	
+	
+ftp_bytes_per_checksum	512
+ 512	
+ 512	
+ 512	
+ 512	
+	
+ftp_client_write_packet_size	65536
+ 65536	
+ 65536	
+ 65536	
+ 65536	
+	
+ftp_replication	3
+ 3	
+ 3	
+ 3	
+ 3	
+	
+ftp_stream_buffer_size	4096
+ 4096	
+ 4096	
+ 4096	
+ 4096	
+	
+ha_zookeeper_acl	world:anyone:rwcda
+ world:anyone:rwcda	
+ world:anyone:rwcda	
+ world:anyone:rwcda	
+ world:anyone:rwcda	
+	
+ha_zookeeper_parent_znode	/hadoop-ha
+ /hadoop-ha	
+ /hadoop-ha	
+ /hadoop-ha	
+ /hadoop-ha	
+	
+ha_zookeeper_session_timeout_ms	5000
+ 5000	
+ 5000	
+ 5000	
+ 5000	
+	
+hadoop_common_configuration_version	0.23.0
+ 0.23.0	
+ 0.23.0	
+ 0.23.0	
+ 0.23.0	
+	
+hadoop_fuse_connection_timeout	300
+ 300	
+ 300	
+ 300	
+ 300	
+	
+hadoop_fuse_timer_period	5
+ 5	
+ 5	
+ 5	
+ 5	
+	
+hadoop_hdfs_configuration_version	1
+ 1	
+ 1	
+ 1	
+ 1	
+	
+hadoop_http_authentication_kerberos_keytab	/usr/lib/hadoop-0.20-mapreduce/hadoop.keytab
+ /usr/lib/hadoop-0.20-mapreduce/hadoop.keytab	
+ /usr/lib/hadoop-0.20-mapreduce/hadoop.keytab	
+ /usr/lib/hadoop-0.20-mapreduce/hadoop.keytab	
+ /usr/lib/hadoop-0.20-mapreduce/hadoop.keytab	
+	
+hadoop_http_authentication_kerberos_principal	HTTP/_HOST@LOCALHOST
+ HTTP/_HOST@LOCALHOST	
+ HTTP/_HOST@LOCALHOST	
+ HTTP/_HOST@LOCALHOST	
+ HTTP/_HOST@LOCALHOST	
+	
+hadoop_http_authentication_signature_secret_file	/usr/lib/hadoop-0.20-mapreduce/hadoop-http-auth-signature-secret
+ /usr/lib/hadoop-0.20-mapreduce/hadoop-http-auth-signature-secret	
+ /usr/lib/hadoop-0.20-mapreduce/hadoop-http-auth-signature-secret	
+ /usr/lib/hadoop-0.20-mapreduce/hadoop-http-auth-signature-secret	
+ /usr/lib/hadoop-0.20-mapreduce/hadoop-http-auth-signature-secret	
+	
+hadoop_http_authentication_simple_anonymous_allowed	true
+ true	
+ true	
+ true	
+ true	
+	
+hadoop_http_authentication_token_validity	36000
+ 36000	
+ 36000	
+ 36000	
+ 36000	
+	
+hadoop_http_authentication_type	simple
+ simple	
+ simple	
+ simple	
+ simple	
+	
+hadoop_http_filter_initializers	org.apache.hadoop.http.lib.StaticUserWebFilter
+ org.apache.hadoop.http.lib.StaticUserWebFilter	
+ org.apache.hadoop.http.lib.StaticUserWebFilter	
+ org.apache.hadoop.http.lib.StaticUserWebFilter	
+ org.apache.hadoop.http.lib.StaticUserWebFilter	
+	
+hadoop_http_staticuser_user	dr.who
+ dr.who	
+ dr.who	
+ dr.who	
+ dr.who	
+	
+hadoop_jetty_logs_serve_aliases	true
+ true	
+ true	
+ true	
+ true	
+	
+hadoop_kerberos_kinit_command	kinit
+ kinit	
+ kinit	
+ kinit	
+ kinit	
+	
+hadoop_proxyuser_httpfs_groups	*
+ *	
+ *	
+ *	
+ *	
+	
+hadoop_proxyuser_httpfs_hosts	*
+ *	
+ *	
+ *	
+ *	
+	
+hadoop_proxyuser_hue_groups	*
+ *	
+ *	
+ *	
+ *	
+	
+hadoop_proxyuser_hue_hosts	*
+ *	
+ *	
+ *	
+ *	
+	
+hadoop_proxyuser_oozie_groups	*
+ *	
+ *	
+ *	
+ *	
+	
+hadoop_proxyuser_oozie_hosts	*
+ *	
+ *	
+ *	
+ *	
+	
+hadoop_relaxed_worker_version_check	true
+ true	
+ true	
+ true	
+ true	
+	
+hadoop_rpc_protection	authentication
+ authentication	
+ authentication	
+ authentication	
+ authentication	
+	
+hadoop_rpc_socket_factory_class_default	org.apache.hadoop.net.StandardSocketFactory
+ org.apache.hadoop.net.StandardSocketFactory	
+ org.apache.hadoop.net.StandardSocketFactory	
+ org.apache.hadoop.net.StandardSocketFactory	
+ org.apache.hadoop.net.StandardSocketFactory	
+	
+hadoop_security_authentication	simple
+ simple	
+ simple	
+ simple	
+ simple	
+	
+hadoop_security_authorization	false
+ false	
+ false	
+ false	
+ false	
+	
+hadoop_security_group_mapping	org.apache.hadoop.security.ShellBasedUnixGroupsMapping
+ org.apache.hadoop.security.ShellBasedUnixGroupsMapping	
+ org.apache.hadoop.security.ShellBasedUnixGroupsMapping	
+ org.apache.hadoop.security.ShellBasedUnixGroupsMapping	
+ org.apache.hadoop.security.ShellBasedUnixGroupsMapping	
+	
+hadoop_security_group_mapping_ldap_search_attr_group_name	cn
+ cn	
+ cn	
+ cn	
+ cn	
+	
+hadoop_security_group_mapping_ldap_search_attr_member	member
+ member	
+ member	
+ member	
+ member	
+	
+hadoop_security_group_mapping_ldap_search_filter_group	(objectClass=group)
+ (objectClass=group)	
+ (objectClass=group)	
+ (objectClass=group)	
+ (objectClass=group)	
+	
+hadoop_security_group_mapping_ldap_search_filter_user	(&(objectClass=user)(sAMAccountName={0}))
+ (&(objectClass=user)(sAMAccountName={0}))	
+ (&(objectClass=user)(sAMAccountName={0}))	
+ (&(objectClass=user)(sAMAccountName={0}))	
+ (&(objectClass=user)(sAMAccountName={0}))	
+	
+hadoop_security_group_mapping_ldap_ssl	false
+ false	
+ false	
+ false	
+ false	
+	
+hadoop_security_groups_cache_secs	300
+ 300	
+ 300	
+ 300	
+ 300	
+	
+hadoop_security_instrumentation_requires_admin	false
+ false	
+ false	
+ false	
+ false	
+	
+hadoop_ssl_client_conf	ssl-client.xml
+ ssl-client.xml	
+ ssl-client.xml	
+ ssl-client.xml	
+ ssl-client.xml	
+	
+hadoop_ssl_enabled	false
+ false	
+ false	
+ false	
+ false	
+	
+hadoop_ssl_hostname_verifier	DEFAULT
+ DEFAULT	
+ DEFAULT	
+ DEFAULT	
+ DEFAULT	
+	
+hadoop_ssl_keystores_factory_class	org.apache.hadoop.security.ssl.FileBasedKeyStoresFactory
+ org.apache.hadoop.security.ssl.FileBasedKeyStoresFactory	
+ org.apache.hadoop.security.ssl.FileBasedKeyStoresFactory	
+ org.apache.hadoop.security.ssl.FileBasedKeyStoresFactory	
+ org.apache.hadoop.security.ssl.FileBasedKeyStoresFactory	
+	
+hadoop_ssl_require_client_cert	false
+ false	
+ false	
+ false	
+ false	
+	
+hadoop_ssl_server_conf	ssl-server.xml
+ ssl-server.xml	
+ ssl-server.xml	
+ ssl-server.xml	
+ ssl-server.xml	
+	
+hadoop_tmp_dir	/var/lib/hadoop-hdfs/cache/mapred
+ /var/lib/hadoop-hdfs/cache/mapred	
+ /var/lib/hadoop-hdfs/cache/mapred	
+ /var/lib/hadoop-hdfs/cache/mapred	
+ /var/lib/hadoop-hdfs/cache/mapred	
+	
+hadoop_util_hash_type	murmur
+ murmur	
+ murmur	
+ murmur	
+ murmur	
+	
+hadoop_work_around_non_threadsafe_getpwuid	false
+ false	
+ false	
+ false	
+ false	
+	
+io_file_buffer_size	4096
+ 4096	
+ 4096	
+ 4096	
+ 4096	
+	
+io_map_index_interval	128
+ 128	
+ 128	
+ 128	
+ 128	
+	
+io_map_index_skip	0
+ 0	
+ 0	
+ 0	
+ 0	
+	
+io_mapfile_bloom_error_rate	0.005
+ 0.005	
+ 0.005	
+ 0.005	
+ 0.005	
+	
+io_mapfile_bloom_size	1048576
+ 1048576	
+ 1048576	
+ 1048576	
+ 1048576	
+	
+io_native_lib_available	true
+ true	
+ true	
+ true	
+ true	
+	
+io_seqfile_compress_blocksize	1000000
+ 1000000	
+ 1000000	
+ 1000000	
+ 1000000	
+	
+io_seqfile_lazydecompress	true
+ true	
+ true	
+ true	
+ true	
+	
+io_seqfile_local_dir	/var/lib/hadoop-hdfs/cache/mapred/io/local
+ /var/lib/hadoop-hdfs/cache/mapred/io/local	
+ /var/lib/hadoop-hdfs/cache/mapred/io/local	
+ /var/lib/hadoop-hdfs/cache/mapred/io/local	
+ /var/lib/hadoop-hdfs/cache/mapred/io/local	
+	
+io_seqfile_sorter_recordlimit	1000000
+ 1000000	
+ 1000000	
+ 1000000	
+ 1000000	
+	
+io_serializations	org.apache.hadoop.io.serializer.WritableSerialization,org.apache.hadoop.io.serializer.avro.AvroSpecificSerialization,org.apache.hadoop.io.serializer.avro.AvroReflectSerialization
+ org.apache.hadoop.io.serializer.WritableSerialization,org.apache.hadoop.io.serializer.avro.AvroSpecificSerialization,org.apache.hadoop.io.serializer.avro.AvroReflectSerialization	
+ org.apache.hadoop.io.serializer.WritableSerialization,org.apache.hadoop.io.serializer.avro.AvroSpecificSerialization,org.apache.hadoop.io.serializer.avro.AvroReflectSerialization	
+ org.apache.hadoop.io.serializer.WritableSerialization,org.apache.hadoop.io.serializer.avro.AvroSpecificSerialization,org.apache.hadoop.io.serializer.avro.AvroReflectSerialization	
+ org.apache.hadoop.io.serializer.WritableSerialization,org.apache.hadoop.io.serializer.avro.AvroSpecificSerialization,org.apache.hadoop.io.serializer.avro.AvroReflectSerialization	
+	
+io_skip_checksum_errors	false
+ false	
+ false	
+ false	
+ false	
+	
+io_sort_factor	10
+ 10	
+ 10	
+ 10	
+ 10	
+	
+io_sort_mb	100
+ 100	
+ 100	
+ 100	
+ 100	
+	
+io_sort_record_percent	0.05
+ 0.05	
+ 0.05	
+ 0.05	
+ 0.05	
+	
+io_sort_spill_percent	0.80
+ 0.80	
+ 0.80	
+ 0.80	
+ 0.80	
+	
+ipc_client_connect_max_retries	10
+ 10	
+ 10	
+ 10	
+ 10	
+	
+ipc_client_connect_max_retries_on_timeouts	45
+ 45	
+ 45	
+ 45	
+ 45	
+	
+ipc_client_connection_maxidletime	10000
+ 10000	
+ 10000	
+ 10000	
+ 10000	
+	
+ipc_client_idlethreshold	4000
+ 4000	
+ 4000	
+ 4000	
+ 4000	
+	
+ipc_client_kill_max	10
+ 10	
+ 10	
+ 10	
+ 10	
+	
+ipc_client_tcpnodelay	false
+ false	
+ false	
+ false	
+ false	
+	
+ipc_server_listen_queue_size	128
+ 128	
+ 128	
+ 128	
+ 128	
+	
+ipc_server_tcpnodelay	false
+ false	
+ false	
+ false	
+ false	
+	
+job_end_retry_attempts	0
+ 0	
+ 0	
+ 0	
+ 0	
+	
+job_end_retry_interval	30000
+ 30000	
+ 30000	
+ 30000	
+ 30000	
+	
+job_local_dir	/var/lib/hadoop-hdfs/cache/mapred/mapred/local/taskTracker/training/jobcache/job_201303301958_0009/work
+ /var/lib/hadoop-hdfs/cache/mapred/mapred/local/taskTracker/training/jobcache/job_201303301958_0009/work	
+ /var/lib/hadoop-hdfs/cache/mapred/mapred/local/taskTracker/training/jobcache/job_201303301958_0009/work	
+ /var/lib/hadoop-hdfs/cache/mapred/mapred/local/taskTracker/training/jobcache/job_201303301958_0009/work	
+ /var/lib/hadoop-hdfs/cache/mapred/mapred/local/taskTracker/training/jobcache/job_201303301958_0009/work	
+	
+jobclient_completion_poll_interval	5000
+ 5000	
+ 5000	
+ 5000	
+ 5000	
+	
+jobclient_output_filter	FAILED
+ FAILED	
+ FAILED	
+ FAILED	
+ FAILED	
+	
+jobclient_progress_monitor_poll_interval	1000
+ 1000	
+ 1000	
+ 1000	
+ 1000	
+	
+jobtracker_thrift_address	0.0.0.0:9290
+ 0.0.0.0:9290	
+ 0.0.0.0:9290	
+ 0.0.0.0:9290	
+ 0.0.0.0:9290	
+	
+keep_failed_task_files	false
+ false	
+ false	
+ false	
+ false	
+	
+kfs_blocksize	67108864
+ 67108864	
+ 67108864	
+ 67108864	
+ 67108864	
+	
+kfs_bytes_per_checksum	512
+ 512	
+ 512	
+ 512	
+ 512	
+	
+kfs_client_write_packet_size	65536
+ 65536	
+ 65536	
+ 65536	
+ 65536	
+	
+kfs_replication	3
+ 3	
+ 3	
+ 3	
+ 3	
+	
+kfs_stream_buffer_size	4096
+ 4096	
+ 4096	
+ 4096	
+ 4096	
+	
+local_cache_size	10737418240
+ 10737418240	
+ 10737418240	
+ 10737418240	
+ 10737418240	
+	
+map_input_file	hdfs://0.0.0.0:8020/user/training/shakespeare/tragedies
+ hdfs://0.0.0.0:8020/user/training/shakespeare/histories	
+ hdfs://0.0.0.0:8020/user/training/shakespeare/glossary	
+ hdfs://0.0.0.0:8020/user/training/shakespeare/comedies	
+ hdfs://0.0.0.0:8020/user/training/shakespeare/poems	
+	
+map_input_length	268140
+ 58976	
+ 1752440	
+ 1479035	
+ 1784616	
+	
+map_input_start	0
+ 0	
+ 0	
+ 0	
+ 0	
+	
+map_sort_class	org.apache.hadoop.util.QuickSort
+ org.apache.hadoop.util.QuickSort	
+ org.apache.hadoop.util.QuickSort	
+ org.apache.hadoop.util.QuickSort	
+ org.apache.hadoop.util.QuickSort	
+	
+mapred_acls_enabled	false
+ false	
+ false	
+ false	
+ false	
+	
+mapred_child_java_opts	-Xmx200m
+ -Xmx200m	
+ -Xmx200m	
+ -Xmx200m	
+ -Xmx200m	
+	
+mapred_child_tmp	./tmp
+ ./tmp	
+ ./tmp	
+ ./tmp	
+ ./tmp	
+	
+mapred_cluster_map_memory_mb	-1
+ -1	
+ -1	
+ -1	
+ -1	
+	
+mapred_cluster_max_map_memory_mb	-1
+ -1	
+ -1	
+ -1	
+ -1	
+	
+mapred_cluster_max_reduce_memory_mb	-1
+ -1	
+ -1	
+ -1	
+ -1	
+	
+mapred_cluster_reduce_memory_mb	-1
+ -1	
+ -1	
+ -1	
+ -1	
+	
+mapred_compress_map_output	false
+ false	
+ false	
+ false	
+ false	
+	
+mapred_create_symlink	yes
+ yes	
+ yes	
+ yes	
+ yes	
+	
+mapred_disk_healthChecker_interval	60000
+ 60000	
+ 60000	
+ 60000	
+ 60000	
+	
+mapred_healthChecker_interval	60000
+ 60000	
+ 60000	
+ 60000	
+ 60000	
+	
+mapred_healthChecker_script_timeout	600000
+ 600000	
+ 600000	
+ 600000	
+ 600000	
+	
+mapred_heartbeats_in_second	100
+ 100	
+ 100	
+ 100	
+ 100	
+	
+mapred_inmem_merge_threshold	1000
+ 1000	
+ 1000	
+ 1000	
+ 1000	
+	
+mapred_input_dir	hdfs://0.0.0.0:8020/user/training/shakespeare
+ hdfs://0.0.0.0:8020/user/training/shakespeare	
+ hdfs://0.0.0.0:8020/user/training/shakespeare	
+ hdfs://0.0.0.0:8020/user/training/shakespeare	
+ hdfs://0.0.0.0:8020/user/training/shakespeare	
+	
+mapred_input_format_class	org.apache.hadoop.mapred.TextInputFormat
+ org.apache.hadoop.mapred.TextInputFormat	
+ org.apache.hadoop.mapred.TextInputFormat	
+ org.apache.hadoop.mapred.TextInputFormat	
+ org.apache.hadoop.mapred.TextInputFormat	
+	
+mapred_jar	/var/lib/hadoop-hdfs/cache/mapred/mapred/local/taskTracker/training/jobcache/job_201303301958_0009/jars/job.jar
+ /var/lib/hadoop-hdfs/cache/mapred/mapred/local/taskTracker/training/jobcache/job_201303301958_0009/jars/job.jar	
+ /var/lib/hadoop-hdfs/cache/mapred/mapred/local/taskTracker/training/jobcache/job_201303301958_0009/jars/job.jar	
+ /var/lib/hadoop-hdfs/cache/mapred/mapred/local/taskTracker/training/jobcache/job_201303301958_0009/jars/job.jar	
+ /var/lib/hadoop-hdfs/cache/mapred/mapred/local/taskTracker/training/jobcache/job_201303301958_0009/jars/job.jar	
+	
+mapred_job_id	job_201303301958_0009
+ job_201303301958_0009	
+ job_201303301958_0009	
+ job_201303301958_0009	
+ job_201303301958_0009	
+	
+mapred_job_local_dir	/var/lib/hadoop-hdfs/cache/mapred/mapred/local/taskTracker/training
+ /var/lib/hadoop-hdfs/cache/mapred/mapred/local/taskTracker/training	
+ /var/lib/hadoop-hdfs/cache/mapred/mapred/local/taskTracker/training	
+ /var/lib/hadoop-hdfs/cache/mapred/mapred/local/taskTracker/training	
+ /var/lib/hadoop-hdfs/cache/mapred/mapred/local/taskTracker/training	
+	
+mapred_job_map_memory_mb	-1
+ -1	
+ -1	
+ -1	
+ -1	
+	
+mapred_job_name	streamjob1737949834000356382.jar
+ streamjob1737949834000356382.jar	
+ streamjob1737949834000356382.jar	
+ streamjob1737949834000356382.jar	
+ streamjob1737949834000356382.jar	
+	
+mapred_job_queue_name	default
+ default	
+ default	
+ default	
+ default	
+	
+mapred_job_reduce_input_buffer_percent	0.0
+ 0.0	
+ 0.0	
+ 0.0	
+ 0.0	
+	
+mapred_job_reduce_memory_mb	-1
+ -1	
+ -1	
+ -1	
+ -1	
+	
+mapred_job_reuse_jvm_num_tasks	1
+ 1	
+ 1	
+ 1	
+ 1	
+	
+mapred_job_shuffle_input_buffer_percent	0.70
+ 0.70	
+ 0.70	
+ 0.70	
+ 0.70	
+	
+mapred_job_shuffle_merge_percent	0.66
+ 0.66	
+ 0.66	
+ 0.66	
+ 0.66	
+	
+mapred_job_tracker	0.0.0.0:8021
+ 0.0.0.0:8021	
+ 0.0.0.0:8021	
+ 0.0.0.0:8021	
+ 0.0.0.0:8021	
+	
+mapred_job_tracker_handler_count	10
+ 10	
+ 10	
+ 10	
+ 10	
+	
+mapred_job_tracker_http_address	0.0.0.0:50030
+ 0.0.0.0:50030	
+ 0.0.0.0:50030	
+ 0.0.0.0:50030	
+ 0.0.0.0:50030	
+	
+mapred_job_tracker_jobhistory_lru_cache_size	5
+ 5	
+ 5	
+ 5	
+ 5	
+	
+mapred_job_tracker_persist_jobstatus_active	false
+ false	
+ false	
+ false	
+ false	
+	
+mapred_job_tracker_persist_jobstatus_dir	/jobtracker/jobsInfo
+ /jobtracker/jobsInfo	
+ /jobtracker/jobsInfo	
+ /jobtracker/jobsInfo	
+ /jobtracker/jobsInfo	
+	
+mapred_job_tracker_persist_jobstatus_hours	0
+ 0	
+ 0	
+ 0	
+ 0	
+	
+mapred_job_tracker_retiredjobs_cache_size	1000
+ 1000	
+ 1000	
+ 1000	
+ 1000	
+	
+mapred_jobtracker_completeuserjobs_maximum	100
+ 100	
+ 100	
+ 100	
+ 100	
+	
+mapred_jobtracker_instrumentation	org.apache.hadoop.mapred.JobTrackerMetricsInst
+ org.apache.hadoop.mapred.JobTrackerMetricsInst	
+ org.apache.hadoop.mapred.JobTrackerMetricsInst	
+ org.apache.hadoop.mapred.JobTrackerMetricsInst	
+ org.apache.hadoop.mapred.JobTrackerMetricsInst	
+	
+mapred_jobtracker_job_history_block_size	3145728
+ 3145728	
+ 3145728	
+ 3145728	
+ 3145728	
+	
+mapred_jobtracker_maxtasks_per_job	-1
+ -1	
+ -1	
+ -1	
+ -1	
+	
+mapred_jobtracker_plugins	org.apache.hadoop.thriftfs.ThriftJobTrackerPlugin
+ org.apache.hadoop.thriftfs.ThriftJobTrackerPlugin	
+ org.apache.hadoop.thriftfs.ThriftJobTrackerPlugin	
+ org.apache.hadoop.thriftfs.ThriftJobTrackerPlugin	
+ org.apache.hadoop.thriftfs.ThriftJobTrackerPlugin	
+	
+mapred_jobtracker_restart_recover	false
+ false	
+ false	
+ false	
+ false	
+	
+mapred_jobtracker_taskScheduler	org.apache.hadoop.mapred.JobQueueTaskScheduler
+ org.apache.hadoop.mapred.JobQueueTaskScheduler	
+ org.apache.hadoop.mapred.JobQueueTaskScheduler	
+ org.apache.hadoop.mapred.JobQueueTaskScheduler	
+ org.apache.hadoop.mapred.JobQueueTaskScheduler	
+	
+mapred_line_input_format_linespermap	1
+ 1	
+ 1	
+ 1	
+ 1	
+	
+mapred_local_dir	/var/lib/hadoop-hdfs/cache/mapred/mapred/local/taskTracker/training/jobcache/job_201303301958_0009/attempt_201303301958_0009_m_000000_0
+ /var/lib/hadoop-hdfs/cache/mapred/mapred/local/taskTracker/training/jobcache/job_201303301958_0009/attempt_201303301958_0009_m_000001_0	
+ /var/lib/hadoop-hdfs/cache/mapred/mapred/local/taskTracker/training/jobcache/job_201303301958_0009/attempt_201303301958_0009_m_000003_0	
+ /var/lib/hadoop-hdfs/cache/mapred/mapred/local/taskTracker/training/jobcache/job_201303301958_0009/attempt_201303301958_0009_m_000004_0	
+ /var/lib/hadoop-hdfs/cache/mapred/mapred/local/taskTracker/training/jobcache/job_201303301958_0009/attempt_201303301958_0009_m_000002_0	
+	
+mapred_local_dir_minspacekill	0
+ 0	
+ 0	
+ 0	
+ 0	
+	
+mapred_local_dir_minspacestart	0
+ 0	
+ 0	
+ 0	
+ 0	
+	
+mapred_map_child_log_level	INFO
+ INFO	
+ INFO	
+ INFO	
+ INFO	
+	
+mapred_map_max_attempts	4
+ 4	
+ 4	
+ 4	
+ 4	
+	
+mapred_map_output_compression_codec	org.apache.hadoop.io.compress.DefaultCodec
+ org.apache.hadoop.io.compress.DefaultCodec	
+ org.apache.hadoop.io.compress.DefaultCodec	
+ org.apache.hadoop.io.compress.DefaultCodec	
+ org.apache.hadoop.io.compress.DefaultCodec	
+	
+mapred_map_runner_class	org.apache.hadoop.streaming.PipeMapRunner
+ org.apache.hadoop.streaming.PipeMapRunner	
+ org.apache.hadoop.streaming.PipeMapRunner	
+ org.apache.hadoop.streaming.PipeMapRunner	
+ org.apache.hadoop.streaming.PipeMapRunner	
+	
+mapred_map_tasks	5
+ 5	
+ 5	
+ 5	
+ 5	
+	
+mapred_map_tasks_speculative_execution	true
+ true	
+ true	
+ true	
+ true	
+	
+mapred_mapoutput_key_class	org.apache.hadoop.io.Text
+ org.apache.hadoop.io.Text	
+ org.apache.hadoop.io.Text	
+ org.apache.hadoop.io.Text	
+ org.apache.hadoop.io.Text	
+	
+mapred_mapoutput_value_class	org.apache.hadoop.io.Text
+ org.apache.hadoop.io.Text	
+ org.apache.hadoop.io.Text	
+ org.apache.hadoop.io.Text	
+ org.apache.hadoop.io.Text	
+	
+mapred_mapper_class	org.apache.hadoop.streaming.PipeMapper
+ org.apache.hadoop.streaming.PipeMapper	
+ org.apache.hadoop.streaming.PipeMapper	
+ org.apache.hadoop.streaming.PipeMapper	
+ org.apache.hadoop.streaming.PipeMapper	
+	
+mapred_max_tracker_blacklists	4
+ 4	
+ 4	
+ 4	
+ 4	
+	
+mapred_max_tracker_failures	4
+ 4	
+ 4	
+ 4	
+ 4	
+	
+mapred_merge_recordsBeforeProgress	10000
+ 10000	
+ 10000	
+ 10000	
+ 10000	
+	
+mapred_min_split_size	0
+ 0	
+ 0	
+ 0	
+ 0	
+	
+mapred_output_compress	false
+ false	
+ false	
+ false	
+ false	
+	
+mapred_output_compression_codec	org.apache.hadoop.io.compress.DefaultCodec
+ org.apache.hadoop.io.compress.DefaultCodec	
+ org.apache.hadoop.io.compress.DefaultCodec	
+ org.apache.hadoop.io.compress.DefaultCodec	
+ org.apache.hadoop.io.compress.DefaultCodec	
+	
+mapred_output_compression_type	RECORD
+ RECORD	
+ RECORD	
+ RECORD	
+ RECORD	
+	
+mapred_output_dir	hdfs://0.0.0.0:8020/user/training/output/nothing
+ hdfs://0.0.0.0:8020/user/training/output/nothing	
+ hdfs://0.0.0.0:8020/user/training/output/nothing	
+ hdfs://0.0.0.0:8020/user/training/output/nothing	
+ hdfs://0.0.0.0:8020/user/training/output/nothing	
+	
+mapred_output_format_class	org.apache.hadoop.mapred.TextOutputFormat
+ org.apache.hadoop.mapred.TextOutputFormat	
+ org.apache.hadoop.mapred.TextOutputFormat	
+ org.apache.hadoop.mapred.TextOutputFormat	
+ org.apache.hadoop.mapred.TextOutputFormat	
+	
+mapred_output_key_class	org.apache.hadoop.io.Text
+ org.apache.hadoop.io.Text	
+ org.apache.hadoop.io.Text	
+ org.apache.hadoop.io.Text	
+ org.apache.hadoop.io.Text	
+	
+mapred_output_value_class	org.apache.hadoop.io.Text
+ org.apache.hadoop.io.Text	
+ org.apache.hadoop.io.Text	
+ org.apache.hadoop.io.Text	
+ org.apache.hadoop.io.Text	
+	
+mapred_queue_default_acl_administer_jobs	*
+ *	
+ *	
+ *	
+ *	
+	
+mapred_queue_default_state	RUNNING
+ RUNNING	
+ RUNNING	
+ RUNNING	
+ RUNNING	
+	
+mapred_queue_names	default
+ default	
+ default	
+ default	
+ default	
+	
+mapred_reduce_child_log_level	INFO
+ INFO	
+ INFO	
+ INFO	
+ INFO	
+	
+mapred_reduce_max_attempts	4
+ 4	
+ 4	
+ 4	
+ 4	
+	
+mapred_reduce_parallel_copies	5
+ 5	
+ 5	
+ 5	
+ 5	
+	
+mapred_reduce_slowstart_completed_maps	0.05
+ 0.05	
+ 0.05	
+ 0.05	
+ 0.05	
+	
+mapred_reduce_tasks	1
+ 1	
+ 1	
+ 1	
+ 1	
+	
+mapred_reduce_tasks_speculative_execution	true
+ true	
+ true	
+ true	
+ true	
+	
+mapred_reducer_class	org.apache.hadoop.streaming.PipeReducer
+ org.apache.hadoop.streaming.PipeReducer	
+ org.apache.hadoop.streaming.PipeReducer	
+ org.apache.hadoop.streaming.PipeReducer	
+ org.apache.hadoop.streaming.PipeReducer	
+	
+mapred_skip_attempts_to_start_skipping	2
+ 2	
+ 2	
+ 2	
+ 2	
+	
+mapred_skip_map_auto_incr_proc_count	true
+ true	
+ true	
+ true	
+ true	
+	
+mapred_skip_map_max_skip_records	0
+ 0	
+ 0	
+ 0	
+ 0	
+	
+mapred_skip_on	false
+ false	
+ false	
+ false	
+ false	
+	
+mapred_skip_reduce_auto_incr_proc_count	true
+ true	
+ true	
+ true	
+ true	
+	
+mapred_skip_reduce_max_skip_groups	0
+ 0	
+ 0	
+ 0	
+ 0	
+	
+mapred_submit_replication	10
+ 10	
+ 10	
+ 10	
+ 10	
+	
+mapred_system_dir	/var/lib/hadoop-hdfs/cache/mapred/mapred/system
+ /var/lib/hadoop-hdfs/cache/mapred/mapred/system	
+ /var/lib/hadoop-hdfs/cache/mapred/mapred/system	
+ /var/lib/hadoop-hdfs/cache/mapred/mapred/system	
+ /var/lib/hadoop-hdfs/cache/mapred/mapred/system	
+	
+mapred_task_cache_levels	2
+ 2	
+ 2	
+ 2	
+ 2	
+	
+mapred_task_id	attempt_201303301958_0009_m_000004_0
+ attempt_201303301958_0009_m_000000_0	
+ attempt_201303301958_0009_m_000002_0	
+ attempt_201303301958_0009_m_000003_0	
+ attempt_201303301958_0009_m_000001_0	
+	
+mapred_task_is_map	true
+ true	
+ true	
+ true	
+ true	
+	
+mapred_task_partition	3
+ 4	
+ 1	
+ 2	
+ 0	
+	
+mapred_task_profile	false
+ false	
+ false	
+ false	
+ false	
+	
+mapred_task_profile_maps	0-2
+ 0-2	
+ 0-2	
+ 0-2	
+ 0-2	
+	
+mapred_task_profile_reduces	0-2
+ 0-2	
+ 0-2	
+ 0-2	
+ 0-2	
+	
+mapred_task_timeout	60000
+ 60000	
+ 60000	
+ 60000	
+ 60000	
+	
+mapred_task_tracker_http_address	0.0.0.0:50060
+ 0.0.0.0:50060	
+ 0.0.0.0:50060	
+ 0.0.0.0:50060	
+ 0.0.0.0:50060	
+	
+mapred_task_tracker_report_address	127.0.0.1:0
+ 127.0.0.1:0	
+ 127.0.0.1:0	
+ 127.0.0.1:0	
+ 127.0.0.1:0	
+	
+mapred_task_tracker_task_controller	org.apache.hadoop.mapred.DefaultTaskController
+ org.apache.hadoop.mapred.DefaultTaskController	
+ org.apache.hadoop.mapred.DefaultTaskController	
+ org.apache.hadoop.mapred.DefaultTaskController	
+ org.apache.hadoop.mapred.DefaultTaskController	
+	
+mapred_tasktracker_dns_interface	default
+ default	
+ default	
+ default	
+ default	
+	
+mapred_tasktracker_dns_nameserver	default
+ default	
+ default	
+ default	
+ default	
+	
+mapred_tasktracker_expiry_interval	600000
+ 600000	
+ 600000	
+ 600000	
+ 600000	
+	
+mapred_tasktracker_indexcache_mb	10
+ 10	
+ 10	
+ 10	
+ 10	
+	
+mapred_tasktracker_instrumentation	org.apache.hadoop.mapred.TaskTrackerMetricsInst
+ org.apache.hadoop.mapred.TaskTrackerMetricsInst	
+ org.apache.hadoop.mapred.TaskTrackerMetricsInst	
+ org.apache.hadoop.mapred.TaskTrackerMetricsInst	
+ org.apache.hadoop.mapred.TaskTrackerMetricsInst	
+	
+mapred_tasktracker_map_tasks_maximum	2
+ 2	
+ 2	
+ 2	
+ 2	
+	
+mapred_tasktracker_reduce_tasks_maximum	2
+ 2	
+ 2	
+ 2	
+ 2	
+	
+mapred_tasktracker_taskmemorymanager_monitoring_interval	5000
+ 5000	
+ 5000	
+ 5000	
+ 5000	
+	
+mapred_tasktracker_tasks_sleeptime_before_sigkill	5000
+ 5000	
+ 5000	
+ 5000	
+ 5000	
+	
+mapred_temp_dir	/var/lib/hadoop-hdfs/cache/mapred/mapred/temp
+ /var/lib/hadoop-hdfs/cache/mapred/mapred/temp	
+ /var/lib/hadoop-hdfs/cache/mapred/mapred/temp	
+ /var/lib/hadoop-hdfs/cache/mapred/mapred/temp	
+ /var/lib/hadoop-hdfs/cache/mapred/mapred/temp	
+	
+mapred_tip_id	task_201303301958_0009_m_000004
+ task_201303301958_0009_m_000000	
+ task_201303301958_0009_m_000002	
+ task_201303301958_0009_m_000003	
+ task_201303301958_0009_m_000001	
+	
+mapred_user_jobconf_limit	5242880
+ 5242880	
+ 5242880	
+ 5242880	
+ 5242880	
+	
+mapred_userlog_limit_kb	0
+ 0	
+ 0	
+ 0	
+ 0	
+	
+mapred_userlog_retain_hours	24
+ 24	
+ 24	
+ 24	
+ 24	
+	
+mapred_work_output_dir	hdfs://0.0.0.0:8020/user/training/output/nothing/_temporary/_attempt_201303301958_0009_m_000002_0
+ hdfs://0.0.0.0:8020/user/training/output/nothing/_temporary/_attempt_201303301958_0009_m_000003_0	
+ hdfs://0.0.0.0:8020/user/training/output/nothing/_temporary/_attempt_201303301958_0009_m_000000_0	
+ hdfs://0.0.0.0:8020/user/training/output/nothing/_temporary/_attempt_201303301958_0009_m_000001_0	
+ hdfs://0.0.0.0:8020/user/training/output/nothing/_temporary/_attempt_201303301958_0009_m_000004_0	
+	
+mapred_working_dir	hdfs://0.0.0.0:8020/user/training
+ hdfs://0.0.0.0:8020/user/training	
+ hdfs://0.0.0.0:8020/user/training	
+ hdfs://0.0.0.0:8020/user/training	
+ hdfs://0.0.0.0:8020/user/training	
+	
+mapreduce_client_genericoptionsparser_used	true
+ true	
+ true	
+ true	
+ true	
+	
+mapreduce_framework_name	yarn
+ yarn	
+ yarn	
+ yarn	
+ yarn	
+	
+mapreduce_ifile_readahead	true
+ true	
+ true	
+ true	
+ true	
+	
+mapreduce_ifile_readahead_bytes	4194304
+ 4194304	
+ 4194304	
+ 4194304	
+ 4194304	
+	
+mapreduce_input_num_files	5
+ 5	
+ 5	
+ 5	
+ 5	
+	
+mapreduce_job_acl_modify_job	 
+  	
+  	
+  	
+  	
+	
+mapreduce_job_acl_view_job	 
+  	
+  	
+  	
+  	
+	
+mapreduce_job_complete_cancel_delegation_tokens	true
+ true	
+ true	
+ true	
+ true	
+	
+mapreduce_job_dir	hdfs://0.0.0.0:8020/var/lib/hadoop-hdfs/cache/mapred/mapred/staging/training/.staging/job_201303301958_0009
+ hdfs://0.0.0.0:8020/var/lib/hadoop-hdfs/cache/mapred/mapred/staging/training/.staging/job_201303301958_0009	
+ hdfs://0.0.0.0:8020/var/lib/hadoop-hdfs/cache/mapred/mapred/staging/training/.staging/job_201303301958_0009	
+ hdfs://0.0.0.0:8020/var/lib/hadoop-hdfs/cache/mapred/mapred/staging/training/.staging/job_201303301958_0009	
+ hdfs://0.0.0.0:8020/var/lib/hadoop-hdfs/cache/mapred/mapred/staging/training/.staging/job_201303301958_0009	
+	
+mapreduce_job_jar_unpack_pattern	(?:classes/|lib/).*|(?:\Qmapper.pl\E)|(?:\Qreducer.pl\E)
+ (?:classes/|lib/).*|(?:\Qmapper.pl\E)|(?:\Qreducer.pl\E)	
+ (?:classes/|lib/).*|(?:\Qmapper.pl\E)|(?:\Qreducer.pl\E)	
+ (?:classes/|lib/).*|(?:\Qmapper.pl\E)|(?:\Qreducer.pl\E)	
+ (?:classes/|lib/).*|(?:\Qmapper.pl\E)|(?:\Qreducer.pl\E)	
+	
+mapreduce_job_jobTokenFile	/var/lib/hadoop-hdfs/cache/mapred/mapred/local/taskTracker/training/jobcache/job_201303301958_0009/jobToken
+ /var/lib/hadoop-hdfs/cache/mapred/mapred/local/taskTracker/training/jobcache/job_201303301958_0009/jobToken	
+ /var/lib/hadoop-hdfs/cache/mapred/mapred/local/taskTracker/training/jobcache/job_201303301958_0009/jobToken	
+ /var/lib/hadoop-hdfs/cache/mapred/mapred/local/taskTracker/training/jobcache/job_201303301958_0009/jobToken	
+ /var/lib/hadoop-hdfs/cache/mapred/mapred/local/taskTracker/training/jobcache/job_201303301958_0009/jobToken	
+	
+mapreduce_job_submithost	localhost.localdomain
+ localhost.localdomain	
+ localhost.localdomain	
+ localhost.localdomain	
+ localhost.localdomain	
+	
+mapreduce_job_submithostaddress	127.0.0.1
+ 127.0.0.1	
+ 127.0.0.1	
+ 127.0.0.1	
+ 127.0.0.1	
+	
+mapreduce_jobtracker_split_metainfo_maxsize	10000000
+ 10000000	
+ 10000000	
+ 10000000	
+ 10000000	
+	
+mapreduce_jobtracker_staging_root_dir	/var/lib/hadoop-hdfs/cache/mapred/mapred/staging
+ /var/lib/hadoop-hdfs/cache/mapred/mapred/staging	
+ /var/lib/hadoop-hdfs/cache/mapred/mapred/staging	
+ /var/lib/hadoop-hdfs/cache/mapred/mapred/staging	
+ /var/lib/hadoop-hdfs/cache/mapred/mapred/staging	
+	
+mapreduce_reduce_input_limit	-1
+ -1	
+ -1	
+ -1	
+ -1	
+	
+mapreduce_reduce_shuffle_connect_timeout	180000
+ 180000	
+ 180000	
+ 180000	
+ 180000	
+	
+mapreduce_reduce_shuffle_maxfetchfailures	10
+ 10	
+ 10	
+ 10	
+ 10	
+	
+mapreduce_reduce_shuffle_read_timeout	180000
+ 180000	
+ 180000	
+ 180000	
+ 180000	
+	
+mapreduce_shuffle_ssl_address	0.0.0.0
+ 0.0.0.0	
+ 0.0.0.0	
+ 0.0.0.0	
+ 0.0.0.0	
+	
+mapreduce_shuffle_ssl_enabled	false
+ false	
+ false	
+ false	
+ false	
+	
+mapreduce_shuffle_ssl_port	50443
+ 50443	
+ 50443	
+ 50443	
+ 50443	
+	
+mapreduce_task_tmp_dir	/var/lib/hadoop-mapreduce/cache/mapred/tasks
+ /var/lib/hadoop-mapreduce/cache/mapred/tasks	
+ /var/lib/hadoop-mapreduce/cache/mapred/tasks	
+ /var/lib/hadoop-mapreduce/cache/mapred/tasks	
+ /var/lib/hadoop-mapreduce/cache/mapred/tasks	
+	
+mapreduce_tasktracker_cache_local_numberdirectories	10000
+ 10000	
+ 10000	
+ 10000	
+ 10000	
+	
+mapreduce_tasktracker_outofband_heartbeat	false
+ false	
+ false	
+ false	
+ false	
+	
+net_topology_node_switch_mapping_impl	org.apache.hadoop.net.ScriptBasedMapping
+ org.apache.hadoop.net.ScriptBasedMapping	
+ org.apache.hadoop.net.ScriptBasedMapping	
+ org.apache.hadoop.net.ScriptBasedMapping	
+ org.apache.hadoop.net.ScriptBasedMapping	
+	
+net_topology_script_number_args	100
+ 100	
+ 100	
+ 100	
+ 100	
+	
+previous	N
+ N	
+ N	
+ N	
+ N	
+	
+rpc_engine_org_apache_hadoop_hdfs_protocolPB_ClientNamenodeProtocolPB	org.apache.hadoop.ipc.ProtobufRpcEngine
+ org.apache.hadoop.ipc.ProtobufRpcEngine	
+ org.apache.hadoop.ipc.ProtobufRpcEngine	
+ org.apache.hadoop.ipc.ProtobufRpcEngine	
+ org.apache.hadoop.ipc.ProtobufRpcEngine	
+	
+runlevel	5
+ 5	
+ 5	
+ 5	
+ 5	
+	
+s3_blocksize	67108864
+ 67108864	
+ 67108864	
+ 67108864	
+ 67108864	
+	
+s3_bytes_per_checksum	512
+ 512	
+ 512	
+ 512	
+ 512	
+	
+s3_client_write_packet_size	65536
+ 65536	
+ 65536	
+ 65536	
+ 65536	
+	
+s3_replication	3
+ 3	
+ 3	
+ 3	
+ 3	
+	
+s3_stream_buffer_size	4096
+ 4096	
+ 4096	
+ 4096	
+ 4096	
+	
+s3native_blocksize	67108864
+ 67108864	
+ 67108864	
+ 67108864	
+ 67108864	
+	
+s3native_bytes_per_checksum	512
+ 512	
+ 512	
+ 512	
+ 512	
+	
+s3native_client_write_packet_size	65536
+ 65536	
+ 65536	
+ 65536	
+ 65536	
+	
+s3native_replication	3
+ 3	
+ 3	
+ 3	
+ 3	
+	
+s3native_stream_buffer_size	4096
+ 4096	
+ 4096	
+ 4096	
+ 4096	
+	
+stream_map_input_writer_class	org.apache.hadoop.streaming.io.TextInputWriter
+ org.apache.hadoop.streaming.io.TextInputWriter	
+ org.apache.hadoop.streaming.io.TextInputWriter	
+ org.apache.hadoop.streaming.io.TextInputWriter	
+ org.apache.hadoop.streaming.io.TextInputWriter	
+	
+stream_map_output_reader_class	org.apache.hadoop.streaming.io.TextOutputReader
+ org.apache.hadoop.streaming.io.TextOutputReader	
+ org.apache.hadoop.streaming.io.TextOutputReader	
+ org.apache.hadoop.streaming.io.TextOutputReader	
+ org.apache.hadoop.streaming.io.TextOutputReader	
+	
+stream_map_streamprocessor	mapper.pl
+ mapper.pl	
+ mapper.pl	
+ mapper.pl	
+ mapper.pl	
+	
+stream_numinputspecs	1
+ 1	
+ 1	
+ 1	
+ 1	
+	
+stream_reduce_input_writer_class	org.apache.hadoop.streaming.io.TextInputWriter
+ org.apache.hadoop.streaming.io.TextInputWriter	
+ org.apache.hadoop.streaming.io.TextInputWriter	
+ org.apache.hadoop.streaming.io.TextInputWriter	
+ org.apache.hadoop.streaming.io.TextInputWriter	
+	
+stream_reduce_output_reader_class	org.apache.hadoop.streaming.io.TextOutputReader
+ org.apache.hadoop.streaming.io.TextOutputReader	
+ org.apache.hadoop.streaming.io.TextOutputReader	
+ org.apache.hadoop.streaming.io.TextOutputReader	
+ org.apache.hadoop.streaming.io.TextOutputReader	
+	
+stream_reduce_streamprocessor	reducer.pl
+ reducer.pl	
+ reducer.pl	
+ reducer.pl	
+ reducer.pl	
+	
+tasktracker_http_threads	40
+ 40	
+ 40	
+ 40	
+ 40	
+	
+tfile_fs_input_buffer_size	262144
+ 262144	
+ 262144	
+ 262144	
+ 262144	
+	
+tfile_fs_output_buffer_size	262144
+ 262144	
+ 262144	
+ 262144	
+ 262144	
+	
+tfile_io_chunk_size	1048576
+ 1048576	
+ 1048576	
+ 1048576	
+ 1048576	
+	
+user_name	training
+ training	
+ training	
+ training	
+ training	
+	
