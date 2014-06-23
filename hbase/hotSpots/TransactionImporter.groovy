@@ -9,17 +9,32 @@ import org.apache.hadoop.hbase.client.Put
 import org.apache.hadoop.hbase.util.Bytes
 import groovy.time.*
 
+
+def cli = new CliBuilder(usage: 'TransactionImporter.groovy [-h|--help] [-c|--create] [-n|--numRecords] [ -t|--tblName] ', 
+                         parser: new org.apache.commons.cli.GnuParser ())
+
+cli.h(longOpt:'help', 'show usage information and quit')
+cli.t(longOpt:'tblName', args:1, required:false, 'Table name to use when ingesting records')
+cli.n(longOpt:'numRecords', args:1, required:false, 'Number of records to import')
+cli.c(longOpt:'createTable', args:0, required:false, 'Drop/create table')
+
+
 /* Setup */
-def transactionsTable
-def numRows = 1000 * 1000
-def flushEvery = 10 * 1000
-def tableName = "njn_transactions"
-def shouldCreateTable = true
+def opt = cli.parse(args)
+if (opt.h) {
+         cli.usage()
+         return 0
+}
+
+def createTable = opt.c ?: false;
+def numRows = (opt.n) ?: 10 * 1000 * 1000
+def tableName = (opt.t) ?: 'njn_transactions'
+def flushEvery = 100 * 1000
 
 HBaseConfiguration conf = new HBaseConfiguration()
 HConnection connection = HConnectionManager.createConnection(conf)
 
-if (shouldCreateTable) {
+if (createTable) {
         admin = new HBaseAdmin(conf)
 
         if (admin.tableExists(tableName)) {
@@ -51,6 +66,7 @@ ta = new TransactionFactory()
 
         if (num % flushEvery == 0) {
                 transactionsTable.flushCommits()
+                println "Flushed ${num}"
         }
 }
 

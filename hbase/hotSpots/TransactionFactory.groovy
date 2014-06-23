@@ -12,10 +12,6 @@ public class TransactionFactory {
                 [ symbol : 'BWLD', price : 200]
         ]
 
-        def getRandTicker() {
-                
-        }
-
         def getNewTrans() {
                 def dt = new Date()
                 def ticker = tickers[rand.nextInt(tickers.size())]
