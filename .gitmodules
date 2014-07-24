@@ -1,0 +1,3 @@
+[submodule "impala-tpcds-kit"]
+	path = impala-tpcds-kit
+	url = hadoop-examples:NathanNeff/impala-tpcds-kit.git
