@@ -9,7 +9,8 @@ data can be read from the file.
 
 2.  Open another shell and run this
 
-    hadoop fs -ls data.txt._COPYING_
-    hadoop fs -cat data.txt._COPYING_ | head -n 10
+    hadoop fs -ls data.txt.\_COPYING\_
+    
+    hadoop fs -cat data.txt.\_COPYING\_ | head -n 10
 
 3. *Note* Don't forget to Ctrl-C ./foo.pl!!!!
