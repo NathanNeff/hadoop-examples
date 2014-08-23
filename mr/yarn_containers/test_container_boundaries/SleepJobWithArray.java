@@ -51,6 +51,8 @@ public class SleepJobWithArray extends Configured implements Tool,
 
   private long mapSleepDuration = 100;
   private long reduceSleepDuration = 100;
+  private boolean initBigArray = false;
+  private int bigArraySize = 512000000;
   private int mapSleepCount = 1;
   private int reduceSleepCount = 1;
   private int count = 0;
@@ -114,7 +116,11 @@ public class SleepJobWithArray extends Configured implements Tool,
       OutputCollector<IntWritable, NullWritable> output, Reporter reporter)
       throws IOException {
 
-    int[] foo = new int[512000000];
+    if (initBigArray) {
+            // Yes, I should use log4j :-/
+            System.out.println("Requesting array of " + bigArraySize);
+            int[] foo = new int[bigArraySize];
+    }
     //it is expected that every map processes mapSleepCount number of records. 
     try {
       reporter.setStatus("Sleeping... (" +
@@ -153,6 +159,10 @@ public class SleepJobWithArray extends Configured implements Tool,
   public void configure(JobConf job) {
     this.mapSleepCount =
       job.getInt("sleep.job.map.sleep.count", mapSleepCount);
+    this.initBigArray =
+      job.getBoolean("initBigArray" , false);
+    this.bigArraySize =
+      job.getInt("bigArraySize" , bigArraySize);
     this.reduceSleepCount =
       job.getInt("sleep.job.reduce.sleep.count", reduceSleepCount);
     this.mapSleepDuration =
