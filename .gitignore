@@ -2,4 +2,5 @@
 *.class
 *.jar
 *.pyc
+*.log
 
