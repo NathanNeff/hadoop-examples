@@ -1,0 +1,15 @@
+myfiles = "hdfs://localhost:8020/user/training/mytext/"
+mytext = sc.wholeTextFiles(myfiles)
+mylines = mytext.map(lambda (filename, content) : ((os.path.basename(filename),content.replace("\n", " "))))
+mywords = mylines.flatMapValues(lambda content : content.split(" "))
+ 
+tf = mywords.map(lambda (filename, word) : ((filename, word), 1)).reduceByKey(lambda a,b : a+b)
+ 
+bign = mytext.count()
+ 
+df = tf.map(lambda ((file,word),count) : (word,1)).countByKey()
+ 
+import math
+ 
+tfidf = tf.map(lambda ((file,word),count) : ((file,word),count*math.log(bign/df.get(word))))
+tfidf.collect()
