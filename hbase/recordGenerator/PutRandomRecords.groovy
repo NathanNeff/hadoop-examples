@@ -65,15 +65,16 @@ def putFromFile(ratingsTable) {
 def genRandomMovieRatings(int numRatings, boolean sequential) {
         def ratings = []
         def seed = new Random()
-        (0 .. numRatings).each {
-                ratings << [ movieid:seed.nextInt(65132) + 1, userid:seed.nextInt(72000), rating:seed.nextInt(5) + 1, timestamp:new Date()]
+        println "Generating ${numRatings} of fake ratings"
+        (0 .. numRatings).each { rtg ->
+                ratings << [ movieid:rtg.mod(64000), userid:seed.nextInt(72000), rating:seed.nextInt(5) + 1, timestamp:new Date()]
         }
         return ratings
 }
 
-def putFromRandom(ratingsTable) {
+def putFromRandom(ratingsTable, numRecords) {
         def start = new Date()
-        def randomPuts = genRandomMovieRatings(1000 * 1000, false)
+        def randomPuts = genRandomMovieRatings(numRecords, false)
         TimeDuration duration = TimeCategory.minus(new Date(), start)
         println "it took " + duration
         randomPuts.eachWithIndex { it, i ->
@@ -92,6 +93,9 @@ def ratingsTable
 def tableName = "njn_users"
 def shouldCreateTable = true
 def shouldPreSplit = false
+// Number of 1,000,000 row batches that should be inserted
+def numBatches = 100
+
 HBaseConfiguration conf = new HBaseConfiguration()
 HConnection connection = HConnectionManager.createConnection(conf)
 HTableInterface table
@@ -107,9 +111,12 @@ def start = new Date()
 
 ratingsTable.setAutoFlush(false)
 // putFromFile(ratingsTable)
-10.times {
-        putFromRandom(ratingsTable)
+
+numBatches.times { batch ->
+        println "Running batch ${batch}"
+        putFromRandom(ratingsTable, 1000 * 1000)
 }
+
 ratingsTable.close()
 
 TimeDuration duration = TimeCategory.minus(new Date(), start)
