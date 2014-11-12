@@ -1,0 +1,162 @@
+added manifest
+adding: SimpleDriver.class(in = 2013) (out= 985)(deflated 51%)
+14/11/11 21:48:48 INFO Configuration.deprecation: session.id is deprecated. Instead, use dfs.metrics.session-id
+14/11/11 21:48:48 INFO jvm.JvmMetrics: Initializing JVM Metrics with processName=JobTracker, sessionId=
+14/11/11 21:48:48 INFO input.FileInputFormat: Total input paths to process : 1
+14/11/11 21:48:48 INFO mapreduce.JobSubmitter: number of splits:1
+14/11/11 21:48:48 INFO Configuration.deprecation: mapred.job.name is deprecated. Instead, use mapreduce.job.name
+14/11/11 21:48:49 INFO mapreduce.JobSubmitter: Submitting tokens for job: job_local745189030_0001
+14/11/11 21:48:49 WARN conf.Configuration: file:/tmp/hadoop-nate/mapred/staging/nate745189030/.staging/job_local745189030_0001/job.xml:an attempt to override final parameter: mapreduce.job.end-notification.max.retry.interval;  Ignoring.
+14/11/11 21:48:49 WARN conf.Configuration: file:/tmp/hadoop-nate/mapred/staging/nate745189030/.staging/job_local745189030_0001/job.xml:an attempt to override final parameter: mapreduce.job.end-notification.max.attempts;  Ignoring.
+14/11/11 21:48:49 WARN conf.Configuration: file:/tmp/hadoop-nate/mapred/local/localRunner/nate/job_local745189030_0001/job_local745189030_0001.xml:an attempt to override final parameter: mapreduce.job.end-notification.max.retry.interval;  Ignoring.
+14/11/11 21:48:49 WARN conf.Configuration: file:/tmp/hadoop-nate/mapred/local/localRunner/nate/job_local745189030_0001/job_local745189030_0001.xml:an attempt to override final parameter: mapreduce.job.end-notification.max.attempts;  Ignoring.
+14/11/11 21:48:49 INFO mapreduce.Job: The url to track the job: http://localhost:8080/
+14/11/11 21:48:49 INFO mapreduce.Job: Running job: job_local745189030_0001
+14/11/11 21:48:49 INFO mapred.LocalJobRunner: OutputCommitter set in config null
+14/11/11 21:48:49 INFO mapred.LocalJobRunner: OutputCommitter is org.apache.hadoop.mapreduce.lib.output.FileOutputCommitter
+14/11/11 21:48:49 INFO mapred.LocalJobRunner: Waiting for map tasks
+14/11/11 21:48:49 INFO mapred.LocalJobRunner: Starting task: attempt_local745189030_0001_m_000000_0
+14/11/11 21:48:49 INFO mapred.Task:  Using ResourceCalculatorProcessTree : [ ]
+14/11/11 21:48:49 INFO mapred.MapTask: Processing split: file:/home/nate/src/hadoop-examples/mr/local_jobrunner/simple-example/somedata.txt:0+30
+14/11/11 21:48:49 INFO mapred.MapTask: Map output collector class = org.apache.hadoop.mapred.MapTask$MapOutputBuffer
+14/11/11 21:48:49 INFO mapred.MapTask: (EQUATOR) 0 kvi 29097980(116391920)
+14/11/11 21:48:49 INFO mapred.MapTask: mapreduce.task.io.sort.mb: 111
+14/11/11 21:48:49 INFO mapred.MapTask: soft limit at 93113552
+14/11/11 21:48:49 INFO mapred.MapTask: bufstart = 0; bufvoid = 116391936
+14/11/11 21:48:49 INFO mapred.MapTask: kvstart = 29097980; length = 7274496
+14/11/11 21:48:49 INFO mapred.LocalJobRunner: 
+14/11/11 21:48:49 INFO mapred.MapTask: Starting flush of map output
+14/11/11 21:48:49 INFO mapred.MapTask: Spilling map output
+14/11/11 21:48:49 INFO mapred.MapTask: bufstart = 0; bufend = 134; bufvoid = 116391936
+14/11/11 21:48:49 INFO mapred.MapTask: kvstart = 29097980(116391920); kvend = 29097932(116391728); length = 49/7274496
+14/11/11 21:48:49 INFO compress.CodecPool: Got brand-new compressor [.snappy]
+14/11/11 21:48:49 INFO mapred.MapTask: Finished spill 0
+14/11/11 21:48:49 INFO mapred.Task: Task:attempt_local745189030_0001_m_000000_0 is done. And is in the process of committing
+14/11/11 21:48:49 INFO mapred.LocalJobRunner: map
+14/11/11 21:48:49 INFO mapred.Task: Task 'attempt_local745189030_0001_m_000000_0' done.
+14/11/11 21:48:49 INFO mapred.LocalJobRunner: Finishing task: attempt_local745189030_0001_m_000000_0
+14/11/11 21:48:49 INFO mapred.LocalJobRunner: map task executor complete.
+14/11/11 21:48:49 INFO mapred.LocalJobRunner: Waiting for reduce tasks
+14/11/11 21:48:49 INFO mapred.LocalJobRunner: Starting task: attempt_local745189030_0001_r_000000_0
+14/11/11 21:48:49 INFO mapred.Task:  Using ResourceCalculatorProcessTree : [ ]
+14/11/11 21:48:49 INFO mapred.ReduceTask: Using ShuffleConsumerPlugin: org.apache.hadoop.mapreduce.task.reduce.Shuffle@10d8733
+14/11/11 21:48:49 INFO reduce.MergeManagerImpl: MergerManager: memoryLimit=652528832, maxSingleShuffleLimit=163132208, mergeThreshold=430669056, ioSortFactor=64, memToMemMergeOutputsThreshold=64
+14/11/11 21:48:49 INFO reduce.EventFetcher: attempt_local745189030_0001_r_000000_0 Thread started: EventFetcher for fetching Map Completion Events
+14/11/11 21:48:50 INFO compress.CodecPool: Got brand-new decompressor [.snappy]
+14/11/11 21:48:50 INFO reduce.LocalFetcher: localfetcher#1 about to shuffle output of map attempt_local745189030_0001_m_000000_0 decomp: 38 len: 42 to MEMORY
+14/11/11 21:48:50 INFO reduce.InMemoryMapOutput: Read 38 bytes from map-output for attempt_local745189030_0001_m_000000_0
+14/11/11 21:48:50 INFO reduce.MergeManagerImpl: closeInMemoryFile -> map-output of size: 38, inMemoryMapOutputs.size() -> 1, commitMemory -> 0, usedMemory ->38
+14/11/11 21:48:50 INFO reduce.EventFetcher: EventFetcher is interrupted.. Returning
+14/11/11 21:48:50 INFO mapred.LocalJobRunner: 1 / 1 copied.
+14/11/11 21:48:50 INFO reduce.MergeManagerImpl: finalMerge called with 1 in-memory map-outputs and 0 on-disk map-outputs
+14/11/11 21:48:50 INFO mapred.Merger: Merging 1 sorted segments
+14/11/11 21:48:50 INFO mapred.Merger: Down to the last merge-pass, with 1 segments left of total size: 28 bytes
+14/11/11 21:48:50 INFO reduce.MergeManagerImpl: Merged 1 segments, 38 bytes to disk to satisfy reduce memory limit
+14/11/11 21:48:50 INFO reduce.MergeManagerImpl: Merging 1 files, 46 bytes from disk
+14/11/11 21:48:50 INFO reduce.MergeManagerImpl: Merging 0 segments, 0 bytes from memory into reduce
+14/11/11 21:48:50 INFO mapred.Merger: Merging 1 sorted segments
+14/11/11 21:48:50 INFO mapred.Merger: Down to the last merge-pass, with 1 segments left of total size: 0 bytes
+14/11/11 21:48:50 INFO mapred.LocalJobRunner: 1 / 1 copied.
+14/11/11 21:48:50 INFO Configuration.deprecation: mapred.skip.on is deprecated. Instead, use mapreduce.job.skiprecords
+14/11/11 21:48:50 INFO mapred.Task: Task:attempt_local745189030_0001_r_000000_0 is done. And is in the process of committing
+14/11/11 21:48:50 INFO mapred.LocalJobRunner: 1 / 1 copied.
+14/11/11 21:48:50 INFO mapred.Task: Task attempt_local745189030_0001_r_000000_0 is allowed to commit now
+14/11/11 21:48:50 INFO output.FileOutputCommitter: Saved output of task 'attempt_local745189030_0001_r_000000_0' to file:/home/nate/src/hadoop-examples/mr/local_jobrunner/simple-example/outputDir/_temporary/0/task_local745189030_0001_r_000000
+14/11/11 21:48:50 INFO mapred.LocalJobRunner: reduce > reduce
+14/11/11 21:48:50 INFO mapred.Task: Task 'attempt_local745189030_0001_r_000000_0' done.
+14/11/11 21:48:50 INFO mapred.LocalJobRunner: Finishing task: attempt_local745189030_0001_r_000000_0
+14/11/11 21:48:50 INFO mapred.LocalJobRunner: Starting task: attempt_local745189030_0001_r_000001_0
+14/11/11 21:48:50 INFO mapred.Task:  Using ResourceCalculatorProcessTree : [ ]
+14/11/11 21:48:50 INFO mapred.ReduceTask: Using ShuffleConsumerPlugin: org.apache.hadoop.mapreduce.task.reduce.Shuffle@548d0a1d
+14/11/11 21:48:50 INFO reduce.MergeManagerImpl: MergerManager: memoryLimit=652528832, maxSingleShuffleLimit=163132208, mergeThreshold=430669056, ioSortFactor=64, memToMemMergeOutputsThreshold=64
+14/11/11 21:48:50 INFO reduce.EventFetcher: attempt_local745189030_0001_r_000001_0 Thread started: EventFetcher for fetching Map Completion Events
+14/11/11 21:48:50 INFO reduce.LocalFetcher: localfetcher#2 about to shuffle output of map attempt_local745189030_0001_m_000000_0 decomp: 26 len: 37 to MEMORY
+14/11/11 21:48:50 INFO reduce.InMemoryMapOutput: Read 26 bytes from map-output for attempt_local745189030_0001_m_000000_0
+14/11/11 21:48:50 INFO reduce.MergeManagerImpl: closeInMemoryFile -> map-output of size: 26, inMemoryMapOutputs.size() -> 1, commitMemory -> 0, usedMemory ->26
+14/11/11 21:48:50 INFO reduce.EventFetcher: EventFetcher is interrupted.. Returning
+14/11/11 21:48:50 INFO mapred.LocalJobRunner: 1 / 1 copied.
+14/11/11 21:48:50 INFO reduce.MergeManagerImpl: finalMerge called with 1 in-memory map-outputs and 0 on-disk map-outputs
+14/11/11 21:48:50 INFO mapred.Merger: Merging 1 sorted segments
+14/11/11 21:48:50 INFO mapred.Merger: Down to the last merge-pass, with 1 segments left of total size: 16 bytes
+14/11/11 21:48:50 INFO reduce.MergeManagerImpl: Merged 1 segments, 26 bytes to disk to satisfy reduce memory limit
+14/11/11 21:48:50 INFO reduce.MergeManagerImpl: Merging 1 files, 41 bytes from disk
+14/11/11 21:48:50 INFO reduce.MergeManagerImpl: Merging 0 segments, 0 bytes from memory into reduce
+14/11/11 21:48:50 INFO mapred.Merger: Merging 1 sorted segments
+14/11/11 21:48:50 INFO mapred.Merger: Down to the last merge-pass, with 1 segments left of total size: -7 bytes
+14/11/11 21:48:50 INFO mapred.LocalJobRunner: 1 / 1 copied.
+14/11/11 21:48:50 INFO mapred.Task: Task:attempt_local745189030_0001_r_000001_0 is done. And is in the process of committing
+14/11/11 21:48:50 INFO mapred.LocalJobRunner: 1 / 1 copied.
+14/11/11 21:48:50 INFO mapred.Task: Task attempt_local745189030_0001_r_000001_0 is allowed to commit now
+14/11/11 21:48:50 INFO output.FileOutputCommitter: Saved output of task 'attempt_local745189030_0001_r_000001_0' to file:/home/nate/src/hadoop-examples/mr/local_jobrunner/simple-example/outputDir/_temporary/0/task_local745189030_0001_r_000001
+14/11/11 21:48:50 INFO mapred.LocalJobRunner: reduce > reduce
+14/11/11 21:48:50 INFO mapred.Task: Task 'attempt_local745189030_0001_r_000001_0' done.
+14/11/11 21:48:50 INFO mapred.LocalJobRunner: Finishing task: attempt_local745189030_0001_r_000001_0
+14/11/11 21:48:50 INFO mapred.LocalJobRunner: Starting task: attempt_local745189030_0001_r_000002_0
+14/11/11 21:48:50 INFO mapred.Task:  Using ResourceCalculatorProcessTree : [ ]
+14/11/11 21:48:50 INFO mapred.ReduceTask: Using ShuffleConsumerPlugin: org.apache.hadoop.mapreduce.task.reduce.Shuffle@7520d2a
+14/11/11 21:48:50 INFO reduce.MergeManagerImpl: MergerManager: memoryLimit=652528832, maxSingleShuffleLimit=163132208, mergeThreshold=430669056, ioSortFactor=64, memToMemMergeOutputsThreshold=64
+14/11/11 21:48:50 INFO reduce.EventFetcher: attempt_local745189030_0001_r_000002_0 Thread started: EventFetcher for fetching Map Completion Events
+14/11/11 21:48:50 INFO reduce.LocalFetcher: localfetcher#3 about to shuffle output of map attempt_local745189030_0001_m_000000_0 decomp: 102 len: 77 to MEMORY
+14/11/11 21:48:50 INFO reduce.InMemoryMapOutput: Read 102 bytes from map-output for attempt_local745189030_0001_m_000000_0
+14/11/11 21:48:50 INFO reduce.MergeManagerImpl: closeInMemoryFile -> map-output of size: 102, inMemoryMapOutputs.size() -> 1, commitMemory -> 0, usedMemory ->102
+14/11/11 21:48:50 INFO reduce.EventFetcher: EventFetcher is interrupted.. Returning
+14/11/11 21:48:50 INFO mapred.LocalJobRunner: 1 / 1 copied.
+14/11/11 21:48:50 INFO reduce.MergeManagerImpl: finalMerge called with 1 in-memory map-outputs and 0 on-disk map-outputs
+14/11/11 21:48:50 INFO mapred.Merger: Merging 1 sorted segments
+14/11/11 21:48:50 INFO mapred.Merger: Down to the last merge-pass, with 1 segments left of total size: 92 bytes
+14/11/11 21:48:50 INFO reduce.MergeManagerImpl: Merged 1 segments, 102 bytes to disk to satisfy reduce memory limit
+14/11/11 21:48:50 INFO reduce.MergeManagerImpl: Merging 1 files, 81 bytes from disk
+14/11/11 21:48:50 INFO reduce.MergeManagerImpl: Merging 0 segments, 0 bytes from memory into reduce
+14/11/11 21:48:50 INFO mapred.Merger: Merging 1 sorted segments
+14/11/11 21:48:50 INFO mapred.Merger: Down to the last merge-pass, with 1 segments left of total size: 29 bytes
+14/11/11 21:48:50 INFO mapred.LocalJobRunner: 1 / 1 copied.
+14/11/11 21:48:50 INFO mapred.Task: Task:attempt_local745189030_0001_r_000002_0 is done. And is in the process of committing
+14/11/11 21:48:50 INFO mapred.LocalJobRunner: 1 / 1 copied.
+14/11/11 21:48:50 INFO mapred.Task: Task attempt_local745189030_0001_r_000002_0 is allowed to commit now
+14/11/11 21:48:50 INFO output.FileOutputCommitter: Saved output of task 'attempt_local745189030_0001_r_000002_0' to file:/home/nate/src/hadoop-examples/mr/local_jobrunner/simple-example/outputDir/_temporary/0/task_local745189030_0001_r_000002
+14/11/11 21:48:50 INFO mapred.LocalJobRunner: reduce > reduce
+14/11/11 21:48:50 INFO mapred.Task: Task 'attempt_local745189030_0001_r_000002_0' done.
+14/11/11 21:48:50 INFO mapred.LocalJobRunner: Finishing task: attempt_local745189030_0001_r_000002_0
+14/11/11 21:48:50 INFO mapred.LocalJobRunner: reduce task executor complete.
+14/11/11 21:48:50 INFO mapreduce.Job: Job job_local745189030_0001 running in uber mode : false
+14/11/11 21:48:50 INFO mapreduce.Job:  map 100% reduce 100%
+14/11/11 21:48:50 INFO mapreduce.Job: Job job_local745189030_0001 completed successfully
+14/11/11 21:48:50 INFO mapreduce.Job: Counters: 33
+	File System Counters
+		FILE: Number of bytes read=8310
+		FILE: Number of bytes written=880664
+		FILE: Number of read operations=0
+		FILE: Number of large read operations=0
+		FILE: Number of write operations=0
+	Map-Reduce Framework
+		Map input records=13
+		Map output records=13
+		Map output bytes=134
+		Map output materialized bytes=156
+		Input split bytes=147
+		Combine input records=0
+		Combine output records=0
+		Reduce input groups=13
+		Reduce shuffle bytes=156
+		Reduce input records=13
+		Reduce output records=13
+		Spilled Records=26
+		Shuffled Maps =3
+		Failed Shuffles=0
+		Merged Map outputs=3
+		GC time elapsed (ms)=118
+		CPU time spent (ms)=0
+		Physical memory (bytes) snapshot=0
+		Virtual memory (bytes) snapshot=0
+		Total committed heap usage (bytes)=683147264
+	Shuffle Errors
+		BAD_ID=0
+		CONNECTION=0
+		IO_ERROR=0
+		WRONG_LENGTH=0
+		WRONG_MAP=0
+		WRONG_REDUCE=0
+	File Input Format Counters 
+		Bytes Read=30
+	File Output Format Counters 
+		Bytes Written=100
