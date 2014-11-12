@@ -3,8 +3,6 @@ import org.apache.hadoop.util.ToolRunner;
 import org.apache.hadoop.conf.Configured;
 import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.fs.Path;
-import org.apache.hadoop.io.IntWritable;
-import org.apache.hadoop.io.Text;
 import org.apache.hadoop.mapreduce.lib.input.FileInputFormat;
 import org.apache.hadoop.mapreduce.lib.output.FileOutputFormat;
 import org.apache.hadoop.mapreduce.Job;
@@ -16,7 +14,7 @@ public class SimpleDriver extends Configured implements Tool {
   public int run (String [] args) throws Exception {
     if (args.length != 2) {
       System.out.printf(
-          args.length + " - Usage: WordCount <input dir> <output dir>\n");
+          args.length + " - Usage: SimpleDriver <input dir> <output dir>\n");
       System.exit(-1);
     }
 
