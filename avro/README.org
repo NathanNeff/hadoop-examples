@@ -1,0 +1,5 @@
+Tutorial from: 
+http://avro.apache.org/docs/current/gettingstartedpython.html
+
+And:
+http://www.harshj.com/2010/04/25/writing-and-reading-avro-data-files-using-python/
