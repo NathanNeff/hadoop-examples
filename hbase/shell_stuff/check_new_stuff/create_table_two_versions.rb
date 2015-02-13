@@ -10,3 +10,5 @@ get tbl, 'Empire', { COLUMN=>'desc:title', VERSIONS=> 2}
 
 disable tbl
 drop tbl
+
+exit
