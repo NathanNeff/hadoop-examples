@@ -33,6 +33,9 @@ scan tbl, { STARTROW => 'rowkey1', STOPROW => 'rowkey4' }
 puts "only retrieve title and type fields"
 scan tbl, { COLUMNS => [ 'desc:title', 'media:type' ] }
 
+put tbl, 'desc:duration', 120
+scan tbl, { FILTER => "SingleColumnValueFilter('desc', 'duration', =, 'binary:120')" }
+
 disable tbl
 drop tbl
 
