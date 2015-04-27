@@ -1,4 +1,5 @@
 #!/bin/bash
+set -e
 hadoop fs -put -f somedata.txt
 rm -f solution/*.class
 rm -f TryKill.jar
