@@ -5,6 +5,9 @@ import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.hbase.HColumnDescriptor;
 import org.apache.hadoop.hbase.HTableDescriptor;
 import org.apache.hadoop.hbase.client.HBaseAdmin;
+import org.apache.hadoop.hbase.client.HConnection;
+import org.apache.hadoop.hbase.client.HConnectionManager;
+
 
 public class CreateTable {
 
@@ -18,21 +21,26 @@ public class CreateTable {
 	 * 
 	 * @throws Exception
 	 */
-	public void createTable(boolean useplainconf) throws Exception {
+	public void createTable(int connectionMethod) throws Exception {
                 HBaseAdmin admin;
-                // This is the way that doesn't work (I don't know why yet)
-                // It fails with
-                if (useplainconf) {
+                if (connectionMethod == 0) {
+                        // This is the way that doesn't work (I don't know why yet)
                         admin = new HBaseAdmin(new Configuration());
                 }
-                else {
+                else if (connectionMethod == 1) {
+                        // This works on CDH 5.3.1
                         admin = new HBaseAdmin(HBaseConfiguration.create());
+                }
+                else {
+                        // This works on CDH 5.3.1
+                        HConnection connection = 
+                                HConnectionManager.createConnection(HBaseConfiguration.create());
+                        admin = new HBaseAdmin(connection);
                 }
 
 		if (admin.tableExists(TEST_TABLE_BYTES)) {
                         admin.disableTable(TEST_TABLE_BYTES);
                         admin.deleteTable(TEST_TABLE_BYTES);
-                        // throw new Exception("Table already exists.  Won't delete");
 		}
 
 		// Create the new table
@@ -47,16 +55,11 @@ public class CreateTable {
 	}
 
 	public static void main(String[] args) {
-                boolean useplainconf = false;
-                System.out.println("args:  " + args);
-                if (args.length > 0) {
-                        useplainconf = true;
-                }
+                int connectionMethod = 2;
 
-                System.out.println("Use plain conf is:  " + useplainconf);
                 try {
                         CreateTable ct = new CreateTable();
-                        ct.createTable(useplainconf);
+                        ct.createTable(connectionMethod);
                 } catch (Exception e) {
                         e.printStackTrace();
                 }
