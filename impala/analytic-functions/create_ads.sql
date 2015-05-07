@@ -1,8 +1,8 @@
 DROP TABLE IF EXISTS ads;
 
 CREATE EXTERNAL TABLE ads
-		(display_site STRING,
-		 display_date TIMESTAMP)
+		(display_date TIMESTAMP,
+		 display_site STRING)
 ROW FORMAT DELIMITED 
 FIELDS TERMINATED BY '\t'
 LOCATION '/dualcore/ads';
