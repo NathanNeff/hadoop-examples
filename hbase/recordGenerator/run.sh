@@ -1,2 +1,2 @@
 #!/bin/bash
-groovy -classpath `hbase classpath` ./PutRandomRecords.groovy
+~/tools/groovy/bin/groovy -classpath `hbase classpath` ./PutRandomRecords.groovy

@@ -72,17 +72,26 @@ def genRandomMovieRatings(int numRatings, boolean sequential) {
         return ratings
 }
 
+def putSmallCF() {
+        Put p2 = new Put(Bytes.toBytes(line.reverse()))
+                p2.add(Bytes.toBytes("smallcf"), Bytes.toBytes("col1"), Bytes.toBytes("hello, I'm small"))
+                ratingsTable.put(p2)
+}
 def putFromRandom(ratingsTable, numRecords) {
         def start = new Date()
         def randomPuts = genRandomMovieRatings(numRecords, false)
         TimeDuration duration = TimeCategory.minus(new Date(), start)
         println "it took " + duration
         randomPuts.eachWithIndex { it, i ->
-                Put p = new Put(Bytes.toBytes(it.userid))
+                Put p = new Put(Bytes.toBytes(i))
                 p.add(Bytes.toBytes("ratings"), Bytes.toBytes(it.movieid), Bytes.toBytes(it.rating))
+                p.add(Bytes.toBytes("ratings"), Bytes.toBytes(it.movieid.toString() + ":comment"), Bytes.toBytes("A totally worthless comment.  Blah Blah. Blah." * 10))
                 ratingsTable.put(p)
-                if (i.mod(20000) == 0) {
+                if (i.mod(10000) == 0) {
                         println i
+                        p = new Put(Bytes.toBytes(it.userid))
+                        p.add(Bytes.toBytes("smallcf"), Bytes.toBytes(it.movieid), Bytes.toBytes(it.rating))
+                        ratingsTable.put(p)
                         ratingsTable.flushCommits()
                 }
         }
@@ -94,7 +103,7 @@ def tableName = "njn_users"
 def shouldCreateTable = true
 def shouldPreSplit = false
 // Number of 1,000,000 row batches that should be inserted
-def numBatches = 100
+def numBatches = 50
 
 HBaseConfiguration conf = new HBaseConfiguration()
 HConnection connection = HConnectionManager.createConnection(conf)
@@ -102,7 +111,7 @@ HTableInterface table
 
 if (shouldCreateTable) {
         admin = new HBaseAdmin(conf)
-        createTable(tableName, shouldPreSplit)
+        createTable('foo', shouldPreSplit)
 }
 
 ratingsTable = connection.getTable(tableName)

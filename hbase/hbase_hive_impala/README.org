@@ -1,0 +1,12 @@
+* This assumes that data is in HBase
+  in the users.ratings column family
+
+  key     column = movieid
+
+  userid  value = rating
+
+  Example, bob rated movie #100 a 5 and rated movie #123 with a 4:
+
+  key
+
+  bob    100:5, 123:4

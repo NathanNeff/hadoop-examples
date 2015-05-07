@@ -3,4 +3,5 @@
 *.jar
 *.pyc
 *.log
+target/
 
