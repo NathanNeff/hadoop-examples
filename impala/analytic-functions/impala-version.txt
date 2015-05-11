@@ -1,0 +1,7 @@
+Impala Shell v2.0.0-cdh5 (ecf30af) built on Sat Oct 11 13:56:06 PDT 2014
+Hadoop 2.5.0-cdh5.2.0
+Subversion http://github.com/cloudera/hadoop -r e1f20a08bde76a33b79df026d00a0c91b2298387
+Compiled by jenkins on 2014-10-11T21:00Z
+Compiled with protoc 2.5.0
+From source with checksum 309bccd135b199bdfdd6df5f3f4153d
+This command was run using /usr/lib/hadoop/hadoop-common-2.5.0-cdh5.2.0.jar
