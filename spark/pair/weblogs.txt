@@ -1,0 +1,11 @@
+1.2.3.4 - /foo.html
+1.2.3.5 - /foo.html
+1.2.3.5 - /foo.html
+1.2.3.6 - /foo.html
+1.2.3.6 - /foo.html
+1.2.3.4 - /foo.html
+192.168.1.123 - /bar.html
+192.168.1.124 - /bar.html
+192.168.1.123 - /bar.html
+192.168.1.124 - /bar.html
+192.168.1.123 - /bar.html
