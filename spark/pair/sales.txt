@@ -1,0 +1,10 @@
+bob	10
+steve	10
+mirko	10
+bob	10
+dave	10
+zip	10
+zip	100
+bob	10
+bob	10
+mirko	20
