@@ -1,0 +1,3 @@
+bob	10
+nate	20
+steve	30
