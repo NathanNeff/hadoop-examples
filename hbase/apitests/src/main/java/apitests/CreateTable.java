@@ -7,12 +7,13 @@ import org.apache.hadoop.hbase.HTableDescriptor;
 import org.apache.hadoop.hbase.client.HBaseAdmin;
 import org.apache.hadoop.hbase.client.HConnection;
 import org.apache.hadoop.hbase.client.HConnectionManager;
+import org.apache.hadoop.hbase.TableName;
 
 
 public class CreateTable {
 
 	public static final String TEST_TABLE = "test_movie";
-	public static final byte[] TEST_TABLE_BYTES = TEST_TABLE.getBytes();
+	public static final byte[] TEST_TABLE_BYTES = TableName.getName(TEST_TABLE);
 	public static final String DESC_COLFAM = "desc";
 	public static final byte[] DESC_COLFAM_BYTES = DESC_COLFAM.getBytes();
 
