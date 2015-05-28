@@ -1,0 +1,29 @@
+#+STARTUP: odd
+#+STARTUP: hidestars
+
+* Schema Design
+
+*** TTL, MIN_VERSIONS
+
+Table "Quotes"
+
+
+| Colfam         | Key            | Timestamp           | Field/Value |
+|----------------+----------------+---------------------+-------------|
+| Hourly         | IBM:2015-05-02 | ts:13:01            | price:41    |
+| MIN_VERSIONS=3 |                | ts:12:02            | price:42    |
+| TTL=1 hour     |                |                     |             |
+| VERSIONS=5     |                | ts:12:01            | price:52    |
+|                |                | ts:11:01 <deleted>  | price:66    |
+|                |                |                     |             |
+|----------------+----------------+---------------------+-------------|
+| Weekly         | IBM:2015-05-02 | ts:2015-05-02:12:00 | price:45    |
+| MIN_VERSIONS=1 | IBM:2015-05-02 | ts:2015-05-02:12:01 | price:45    |
+| TTL=1 Week     | IBM:2015-05-02 | ts:2015-05-02:12:02 | price:45    |
+| VERSIONS=5     | IBM:2015-05-02 | ts:2015-05-02:12:03 | price:45    |
+|                | IBM:2015-05-02 | ts:2015-05-02:12:04 | price:45    |
+|                | IBM:2015-05-01 | ts:2015-05-01       | price:40    |
+|                | IBM:2015-05-01 | ts:2015-05-01       | price:40    |
+|                | IBM:2015-05-01 | ts:2015-05-01       | price:40    |
+|                |                |                     |             |
+|                |                |                     |             |
