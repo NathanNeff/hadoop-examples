@@ -1,0 +1,10 @@
+albert	MO
+bob	NY
+carl	FL
+jake	MO
+jeff	NY
+lucy	IL
+steve	IL
+tatsuo	JAPAN
+trapper john, MD	CA
+zip	CA
