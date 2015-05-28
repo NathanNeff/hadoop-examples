@@ -4,5 +4,7 @@
 *.pyc
 *.log
 *.*~
+*.classpath
+*.project
 target/
 
