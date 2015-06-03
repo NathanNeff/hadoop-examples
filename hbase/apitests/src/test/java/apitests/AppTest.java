@@ -20,6 +20,9 @@ import org.apache.hadoop.hbase.client.Put;
 import org.apache.hadoop.hbase.client.Result;
 import org.apache.hadoop.hbase.client.ResultScanner;
 import org.apache.hadoop.hbase.client.Scan;
+import org.apache.hadoop.hbase.filter.CompareFilter;
+import org.apache.hadoop.hbase.filter.RegexStringComparator;
+import org.apache.hadoop.hbase.filter.RowFilter;
 import org.apache.hadoop.hbase.util.Bytes;
 
 /**
@@ -122,6 +125,67 @@ public class AppTest extends TestCase {
 		conn.close();
 	
 	
+	}
+	
+	
+	public void testRegexFilter() throws IOException {
+		Configuration cfg = HBaseConfiguration.create();
+		HConnection conn = HConnectionManager.createConnection(cfg);
+		HTableInterface table = conn.getTable(TableName.valueOf("movie"));
+
+		Put p1 = new Put(Bytes.toBytes("valueTHIS"));
+		p1.add(Bytes.toBytes("info"), Bytes.toBytes("someCol"), Bytes.toBytes("someVal"));
+		table.put(p1);
+
+		Put p2 = new Put(Bytes.toBytes("THISvalue"));
+		p2.add(Bytes.toBytes("info"), Bytes.toBytes("someCol"), Bytes.toBytes("someVal"));
+		table.put(p2);
+
+		Scan s = new Scan();
+
+		RowFilter rf = new RowFilter(CompareFilter.CompareOp.EQUAL, new RegexStringComparator(".*value"));
+		s.addFamily(Bytes.toBytes("info"));
+		s.setFilter(rf);
+		ResultScanner rs = table.getScanner(s);
+		System.out.println("Here's with .*value");
+		for (Result r : rs) {
+
+			System.out.println(Bytes.toString(r.getRow()));
+		}
+
+		s = new Scan();
+
+		rf = new RowFilter(CompareFilter.CompareOp.EQUAL, new RegexStringComparator("value"));
+		s.addFamily(Bytes.toBytes("info"));
+		s.setFilter(rf);
+		rs = table.getScanner(s);
+		System.out.println("Here's with value");
+		for (Result r : rs) {
+
+			System.out.println(Bytes.toString(r.getRow()));
+		}
+
+		s = new Scan();
+
+		rf = new RowFilter(CompareFilter.CompareOp.EQUAL, new RegexStringComparator("value$"));
+		s.addFamily(Bytes.toBytes("info"));
+		s.setFilter(rf);
+		rs = table.getScanner(s);
+		System.out.println("Here's with value$");
+		for (Result r : rs) {
+
+			System.out.println(Bytes.toString(r.getRow()));
+		}
+	}	
+	
+	public static void main(String[] args) {
+		AppTest at = new AppTest("something");
+		try {
+			at.testRegexFilter();
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 	}
 	
 }
