@@ -16,6 +16,18 @@ puts "Getting data:  We should only see data from desc colfam\n:" +
      "And we should see 1977 because it has a later timestamp"
 get tbl, 'Star Wars', { COLUMN => 'desc' }
 
+puts "Getting data with ['desc']" 
+get tbl, 'Star Wars', { COLUMN => ['desc'] }
+
+# Note ['desc:'] invalid as of (at least) CDH 5.2
+puts "Getting data with ['desc:']" 
+get tbl, 'Star Wars', { COLUMN => ['desc:'] }
+
+# Note 'desc:' invalid as of (at least) CDH 5.2
+puts "Getting the data with 'desc:'"
+get tbl, 'Star Wars', { COLUMN => 'desc:' }
+
+puts "Disabling/dropping #{tbl}"
 disable tbl
 drop tbl
 
