@@ -1,0 +1,14 @@
+CREATE DATABASE IF NOT EXISTS he;
+CREATE TABLE IF NOT EXISTS he.customers(
+		cust_id STRING, 
+        first_name STRING)
+ROW FORMAT DELIMITED
+FIELDS TERMINATED BY '\t';
+
+CREATE TABLE IF NOT EXISTS he.orders(
+		order_id INT, 
+		cust_id STRING, 
+		first_name STRING, 
+		order_date STRING)
+ROW FORMAT DELIMITED
+FIELDS TERMINATED BY '\t';
