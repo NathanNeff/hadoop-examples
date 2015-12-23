@@ -1,4 +1,4 @@
-package apitests;
+package misc;
 
 import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.hbase.HBaseConfiguration;
