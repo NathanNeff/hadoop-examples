@@ -1,6 +1,7 @@
 package util;
 
 import java.io.IOException;
+import java.util.Observable;
 
 import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.hbase.HBaseConfiguration;
@@ -11,7 +12,7 @@ import org.apache.hadoop.hbase.client.HTableInterface;
 import org.apache.hadoop.hbase.client.Put;
 import org.apache.hadoop.hbase.util.Bytes;
 
-public class HBaseUtility {
+public class HBaseUtility extends Observable {
 
 	private static final long serialVersionUID = 1L;
 	HConnection connection;
@@ -36,6 +37,11 @@ public class HBaseUtility {
 
 			long startTime = System.currentTimeMillis();
 			for (int timez = 0; timez < numRecords - 1; timez++) {
+				
+				// System.out.println("Before");
+				this.setChanged();
+				this.notifyObservers(new Integer(timez));
+				// System.out.println("After");
 				Put p = new Put(Bytes.toBytes(Long.toString(timez + startTime)));
 				p.add(Bytes.toBytes("cf1"), Bytes.toBytes("col1"),
 						Bytes.toBytes(timez));

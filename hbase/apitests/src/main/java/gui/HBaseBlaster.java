@@ -3,6 +3,8 @@ package gui;
 import java.awt.EventQueue;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.Observable;
+import java.util.Observer;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
@@ -10,10 +12,14 @@ import javax.swing.JTextPane;
 
 import util.HBaseUtility;
 
-public class HBaseBlaster {
+import javax.swing.JProgressBar;
+
+public class HBaseBlaster implements Observer {
 
 	private JFrame frame;
 	private HBaseUtility caot;
+	private	JProgressBar progressBar;
+private JProgressBar progressBar_1;
 
 	/**
 	 * Launch the application.
@@ -54,12 +60,34 @@ public class HBaseBlaster {
 		JButton btnPerformPuts = new JButton("Put");
 		btnPerformPuts.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				progressBar_1.setMaximum(10000);
+				progressBar_1.setValue(0);
 				caot.blast("testTable", 10000);
 			}
 		});
 		btnPerformPuts.setBounds(319, 346, 107, 25);
 		frame.getContentPane().add(btnPerformPuts);
+		
+		progressBar = new JProgressBar();
+		progressBar.setVisible(true);
+		frame.getContentPane().add(progressBar);
+		
+		progressBar_1 = new JProgressBar();
+		progressBar_1.setBounds(12, 223, 422, 14);
+		frame.getContentPane().add(progressBar_1);
 
 		caot = new HBaseUtility();
+		caot.addObserver(this);
+	}
+
+	@Override
+	public void update(Observable o, Object arg) {
+
+		Integer prog = (Integer) arg;
+		this.frame.getContentPane().update(this.frame.getGraphics());
+		
+		progressBar_1.setValue(prog);
+		
+		
 	}
 }
