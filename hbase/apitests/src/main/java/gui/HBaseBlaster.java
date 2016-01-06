@@ -8,11 +8,10 @@ import java.util.Observer;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
+import javax.swing.JProgressBar;
 import javax.swing.JTextPane;
 
 import util.HBaseUtility;
-
-import javax.swing.JProgressBar;
 
 public class HBaseBlaster implements Observer {
 
@@ -20,6 +19,7 @@ public class HBaseBlaster implements Observer {
 	private HBaseUtility caot;
 	private	JProgressBar progressBar;
 private JProgressBar progressBar_1;
+private JButton btnTruncateTable;
 
 	/**
 	 * Launch the application.
@@ -75,6 +75,24 @@ private JProgressBar progressBar_1;
 		progressBar_1 = new JProgressBar();
 		progressBar_1.setBounds(12, 223, 422, 14);
 		frame.getContentPane().add(progressBar_1);
+		
+		JButton btnPerformCheckAnd = new JButton("Perform Check and Put");
+		btnPerformCheckAnd.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				caot.checkAndPut("testTable");
+			}
+		});
+		btnPerformCheckAnd.setBounds(12, 346, 107, 25);
+		frame.getContentPane().add(btnPerformCheckAnd);
+		
+		btnTruncateTable = new JButton("Truncate Table");
+		btnTruncateTable.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				caot.truncateTable("testTable");
+			}
+		});
+		btnTruncateTable.setBounds(12, 259, 107, 25);
+		frame.getContentPane().add(btnTruncateTable);
 
 		caot = new HBaseUtility();
 		caot.addObserver(this);
