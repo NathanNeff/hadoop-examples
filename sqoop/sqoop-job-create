@@ -1,0 +1,10 @@
+sqoop job --create import-accounts -- \
+import \
+--connect jdbc:mysql://servername/dbname \
+--username something --password something \
+--table accounts \
+--target-dir /accounts \
+--null-string '\\N' \
+--null-non-string '\\N' \
+--incremental append \
+--check-column acct_num
