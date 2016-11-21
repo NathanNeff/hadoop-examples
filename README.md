@@ -13,8 +13,17 @@ There is also a script: utils/setup_env.sh that can be sourced inside other
 shell scripts to try to find the hadoop-examples.jar.  It is ugly, but
 sometimes convenient :-/
 
-Release Notes
-=============
+# Release Notes
+
+## HBase Block Size
+
+November 2016
+
+HBase Block Size utility =hbase/hbase_blocks/hbase_blocks.rb= creates a table with
+a specified HBase block size.  Writes data, flushes, then uses admin object to
+get the region name.  Displays exact command =hbase hfile= to use to view the store
+file's index.  Some okay/kinda cool JRuby stuff there.
+
 
 Streaming Config Dumper
 -----------------------
