@@ -9,7 +9,7 @@ if [[ -z "$DB_NAME" || -z "$USER_ID" || -z "$PASSWORD" ]]; then
 fi
 
 # Load MySQL
-mysql -u $USER_ID <<EOF
+mysql -u $USER_ID --password=$PASSWORD <<EOF
 		CREATE DATABASE IF NOT EXISTS $DB_NAME;
 
 		USE $DB_NAME;
