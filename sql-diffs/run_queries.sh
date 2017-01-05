@@ -15,6 +15,8 @@ for SQL_QUERY_FILE in query*.sql; do
         mysql -u $USER_ID --password=$PASSWORD $DB_NAME --column-names=false \
 		    < $SQL_QUERY_FILE > $SQL_QUERY_FILE-mysql-results.txt
 
-		beeline -u jdbc:hive2://localhost:10000/$DB_NAME  -n $USER_ID -p $PASSWORD \
-                -f $SQL_QUERY_FILE --outputformat tsv2 > $SQL_QUERY_FILE-hive-results.txt
+		beeline -u jdbc:hive2://localhost:10000/$DB_NAME --silent --verbose=false \
+                 --showHeader=false \
+                 --username=$USER_ID --password=$PASSWORD \
+                -f $SQL_QUERY_FILE --outputformat=tsv2 | sed -e '/^$d/d' > $SQL_QUERY_FILE-hive-results.txt
 done
