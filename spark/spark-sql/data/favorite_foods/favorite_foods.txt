@@ -1,0 +1,12 @@
+1	chocolate,bread,pot roast,chicken
+2	pizza,milk,flowers,led zeppelin,rabbit,duck,pheasant,pheasant
+3	nothing
+4	
+5	cheese,milk,bananas,apples
+6	carrots,celery,steak
+7	chili
+8	turkey
+9	roasted duck
+10	possum soup
+11	stone soup,french fries
+12	hamburgers,quail,milk
