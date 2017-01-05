@@ -7,21 +7,11 @@
     <name>"Spark Word Count"</name>
 
     <properties>
-        <spark.version>1.3.0-cdh5.4.3</spark.version>
+	<cdh.version>cdh5.7.0</cdh.version>
+        <spark.version>1.6.0-${cdh.version}</spark.version>
     </properties>
 
     <repositories>
-        <repository>
-            <id>apache-repo</id>
-            <name>Apache Repository</name>
-            <url>https://repository.apache.org/content/repositories/releases</url>
-            <releases>
-                <enabled>true</enabled>
-            </releases>
-            <snapshots>
-                <enabled>false</enabled>
-            </snapshots>
-        </repository>
         <repository>
             <id>maven-hadoop</id>
             <name>Hadoop Releases</name>
