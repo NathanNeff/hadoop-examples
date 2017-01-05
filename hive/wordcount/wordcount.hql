@@ -1,16 +1,11 @@
-CREATE DATABASE IF NOT EXISTS hadoop_examples;
+DROP TABLE shakespeare;
+CREATE EXTERNAL TABLE shakespeare (line STRING)
+LOCATION '/user/training/shakespeare';
 
-USE hadoop_examples;
-
-DROP TABLE IF EXISTS wordcount_input;
-DROP TABLE IF EXISTS wordcount_results;
-
-CREATE EXTERNAL TABLE wordcount_input (line STRING)
-LOCATION '${hivevar:input_directory}';
-
-CREATE TABLE wordcount_results AS
+DROP TABLE IF EXISTS wordcount;
+CREATE TABLE wordcount AS
 SELECT word, count(1) AS count 
 FROM
 	(SELECT explode(split(lcase(line), '\\W+')) AS word 
-          FROM wordcount_input) words
+          FROM shakespeare) words
 GROUP BY word ORDER BY word;
