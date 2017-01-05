@@ -8,10 +8,7 @@ scanned and rows returned using various combinations of start/stop row, and Pref
 
 To run, use:
 
-	mvn package
-	java -cp `hbase classpath`:target/hbasesandbox-1.0-SNAPSHOT.jar hbasesandbox.StopRowThing
-
-(Or, you can use the ./runStopRowThing.sh shell script)
+	./runStopRowThing.sh
 
 You can use Eclipse to work with the code.  To create an Eclipse project, use:
 
@@ -19,4 +16,5 @@ You can use Eclipse to work with the code.  To create an Eclipse project, use:
 
 It should then be possible to use Eclipse to modify / run the Java source code.
 
-Log level can be tuned by editing src/main/java/hbasesandbox/StopRowThing.java
+Log level can be tuned by editing src/main/resources/log4j.properties and
+setting hbase.root.logger=INFO,console
