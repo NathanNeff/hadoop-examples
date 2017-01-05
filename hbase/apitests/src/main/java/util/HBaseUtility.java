@@ -37,10 +37,10 @@ public class HBaseUtility extends Observable {
 	// deleting the table, then re-creating it.
 	public void truncateTable(String tableName) {
 		HBaseAdmin admin;
-		try {
 
+		try {
 			admin = new HBaseAdmin(connection);
-		} catch (MasterNotRunningException | ZooKeeperConnectionException e) {
+		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 			return;
@@ -71,8 +71,7 @@ public class HBaseUtility extends Observable {
 		}
 
 		if (true == isDisabled) {
-			System.out.println("... Table " + tableName
-					+ " successfully disabled.\n");
+			System.out.println("... Table " + tableName + " successfully disabled.\n");
 			System.out.println("... Deleting table " + tableName + "\n");
 			try {
 
@@ -89,11 +88,9 @@ public class HBaseUtility extends Observable {
 					io.printStackTrace();
 				}
 			}
-			System.out.println("\nTable: " + tableName
-					+ " successfully deleted.\n");
+			System.out.println("\nTable: " + tableName + " successfully deleted.\n");
 		} else {
-			System.out.println("ERROR: Table " + tableName
-					+ " disable failed.\n");
+			System.out.println("ERROR: Table " + tableName + " disable failed.\n");
 			System.out.println("\n");
 		}
 		try {
@@ -160,11 +157,8 @@ public class HBaseUtility extends Observable {
 		boolean res3;
 		try {
 
-			res3 = tbl.checkAndPut(rowKey, CF_CF1, COL_FIRST_NAME,
-					FIRST_NAME_V1, p2);
-			System.out
-					.println("\nLast Name was put after checking first name? : "
-							+ res3 + "\n"); // true
+			res3 = tbl.checkAndPut(rowKey, CF_CF1, COL_FIRST_NAME, FIRST_NAME_V1, p2);
+			System.out.println("\nLast Name was put after checking first name? : " + res3 + "\n"); // true
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -176,8 +170,7 @@ public class HBaseUtility extends Observable {
 	public void blast(String tableName, int numRecords) {
 
 		try {
-			HTableInterface tbl = connection.getTable(TableName
-					.valueOf(tableName));
+			HTableInterface tbl = connection.getTable(TableName.valueOf(tableName));
 
 			long startTime = System.currentTimeMillis();
 			for (int timez = 0; timez < numRecords - 1; timez++) {
@@ -187,8 +180,7 @@ public class HBaseUtility extends Observable {
 				this.notifyObservers(new Integer(timez));
 				System.out.println("After");
 				Put p = new Put(Bytes.toBytes(Long.toString(timez + startTime)));
-				p.add(Bytes.toBytes("cf1"), Bytes.toBytes("col1"),
-						Bytes.toBytes(timez));
+				p.add(Bytes.toBytes("cf1"), Bytes.toBytes("col1"), Bytes.toBytes(timez));
 				tbl.put(p);
 			}
 		} catch (Exception e) {
