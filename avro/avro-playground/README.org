@@ -1,0 +1,254 @@
+#+STARTUP: indent hidestars odd
+* Exercise 1: nlp-mr
+  
+   Code Dir: $BDDIR/nlp-mr                
+ Data Files: $BDDATADIR/kb                
+ HDFS Paths: /loudacre/allkb.txt (input)  
+             /loudacre/kboutput  (output) 
+
+** Goal
+
+    HTML KnowledgeBase articles are tagged as follows:
+    <h4>tags: customer, customers, cancelled, canceling, overheating</h4>
+
+    We want to know all tags in KB articles, and the count of each:
+
+    cancel  : 3
+    customer: 2
+    overheating : 1
+    
+
+** MapReduce
+
+   Map:
+
+   1) Read each line
+
+   2) Ignore lines with no tags (KBHelper.isTagLine)
+
+   3) When a line contains tags:
+      - Split the line into tags (KBHelper.getWords)
+      - Calculate 'stem' of tag
+      - Emit the stem as key
+      - Emit 1 as value
+
+   Reduce:
+
+   1) Receives each tag (key) and a list of values (the count)
+      customer,1 
+      customer, 1
+      customer, 1
+
+   2) Emit stem and sum of the values (total count)
+
+   Driver:
+
+   Performs HouseKeeping things like declaring the map class, reduce
+   class that needs to be run.
+
+   Desired Result:
+
+   customer  100
+   cancel    30
+   service   50
+
+** Set up Eclipse
+
+** Unit Tests
+
+** MapReduce Unit Tests
+
+
+* Exercise 1: Bonus NLP-MR
+
+** Goal
+
+   Users have noticed there's "interesting" results from the Stemmer.
+   Users want to see the stem, and the count of all words having that
+   stem, but also want the list of words that pertain to each stem
+
+   E.g. 
+
+   Input: <h4>tags: cancel, cancels, cancelled, cancelling</h4>
+          ...
+
+   Output: cancel - 4 cancelled, cancelling, cancels
+
+** Mapper
+
+   1) Read each line, and stem the words
+   2) Produce the stem as key and a /complex object/ as the value.
+      Since we need to preserve the stem (key), the count, *and* the
+      original word, we use a Complex Writable called
+      "WordAndCountWritable" which stores both the original word and
+      the count.
+   3) Emit stem as key and WordAndCountWritable("cancelled", 1) as value
+
+      cancel, ("cancelled", 1)
+      cancel, ("cancels", 1)
+      overh, ("overheated", 1)
+      overheat, ("overheating", 1)
+** Reducer
+
+   Will receive stem, and a list of WordAndCountWritables.
+
+   key: "cancel"
+   values: 
+        WordAndCountWritable("cancelled", 1)
+        WordAndCountWritable("cancelling", 1)
+        WordAndCountWritable("cancels", 1)
+        WordAndCountWritable("cancelling", 1)
+
+
+   emit:
+   "cancel", "4 - cancels, cancelling, cancelled"
+
+
+
+
+
+
+
+* Exercise 2: Working with Avro Schemas
+
+  Exercise Directory : $BDDIR/avro
+                Data : Part of the "avro" project 
+                       (in source code)  
+
+
+** Part 1: Create Avro Schema and write Avro Data
+
+   - 
+   Create Avro Schemas, write Avro using Java code, read it using
+   avro-tools
+
+   1) Create an Avro schema with the following fields:
+
+     | Name                | Type   |
+     |---------------------+--------|
+     | activationTimestamp | long   |
+     | device_type         | string |
+     | acct_num            | int    |
+     | device_id           | string |
+     | phone_number        | string |
+     | deviceModel         | string |
+
+   2) Use the Maven POM to generate Java source code for Avro schemas
+      - pom.xml (see =build= element near the bottom)
+      
+      $ mvn generate-sources   
+   
+   3) Avro java classes should adhere to the schema defined above
+
+      Activation.java
+      Device.java
+
+   4) Write Unit Tests to adhere to the schema.
+
+** Part 2: Using Avro Tools
+
+   1) View the AvroDeviceWriter class
+   2) Generate data using the AvroDeviceWriter, *Bonus* both Snappy
+      and uncompressed.  Save them as *v1* files
+   3) View the data using avro-tools
+   4) Create a Reader for the Avro Data 
+
+http://archive.cloudera.com/cdh5/cdh/5/avro-1.7.6-cdh5.4.5.tar.gz
+	or
+https://github.com/apache/avro/blob/master/doc/examples/java-example/src/main/java/example/SpecificMain.java
+
+** Part 3: Bonus Exercise
+
+    1) Unit Tests for Device for new battery field
+       - Add battery field
+       - Test default value for battery using Builder pattern
+
+    2) We remember we have old data as "v1" w/o battery.
+       - Remove battery from device.avsc
+       - Add "battery" field as deviceV2
+         - Write V2 files using new battery field that has type
+           union
+         - Write "Unit" tests that read from the old file and
+           dump deviceV2 records
+         - Show unit tests that do not need to write / read from
+           files, but can use in-memory structures instead
+
+    4) *Read* data using Java and avro-tools
+       - Read V2 data using V1 Schema	 
+       - Read V1 data with V2 Schema
+	 - battery field
+
+
+
+* Exercise 3: Transforming Data with Kite
+
+| Directory:  | $BDDIR/device-activation    |
+| Data files: | $BDDATADIR/activations      |
+| HDFS Paths: | /loudacre/activations       |
+|             | /loudacre/deviceactivations |
+
+1) View XML data (activations) in local file system
+
+2) Count the # of models in the activation records
+
+3) Create URI for Kite Dataset:
+
+   | name:      | "deviceactivations"         |
+   |            | (no namespace)              |
+   | loc:       | Hive Metastore              |
+   | HDFS Path: | /loudacre/deviceactivations |
+
+   - Create DatasetDescriptor using the Schema URI
+
+   - Create Dataset based on that Descriptor
+
+   - Create DatasetWriter instance for writing records to the dataset
+
+   - Write each activation object in a for loop
+
+   - Use the kite-dataset API to view/query data
+
+http://kitesdk.org/docs/1.0.0/API-Overview.html
+   - Use Impala to view/query the data
+* Exercise 4: Importing Customer Account Data
+
+| Exercise Dir: | $BDDIR/sqoop       |
+| MySQL Table:  | Accounts           |
+| HDFS Path:    | /loudacre/accounts |
+|               |                    |
+
+** Examine MySQL Data Using Sqoop
+** Sqoop Import
+
+Review MapReduce Job Statistics
+
+** Explore Output
+** Incremental Updates
+
+** Bonus Exercises
+
+- tab delimiter
+- SequenceFile
+- Avro
+- WHERE clause
+  - State = CA
+  - acct_close_dt IS NULL
+
+** Bonus Bonus (Sqoop Job)
+
+* Exercise 5: Collecting Web Server Logs w/Flume
+
+| Dir:   | $BDDIR/flume            |
+| Data:  | $BDDATADIR/weblogs      |
+| HDFS:  | /loudacre/weblogs       |
+| Local: | /flume/weblogs_spooldir |
+
+** Write weblog data
+   - Write to /loudacre/weblogs
+   - rollInterval, rollCount,
+     rollSize
+   - DataStream
+
+   - Memory channel 100,000 events
+   - transactionCapacity 1,000
+** Bonus netcat

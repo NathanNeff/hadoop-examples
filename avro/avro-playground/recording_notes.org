@@ -1,0 +1,36 @@
+* Recording Notes
+
+* Exercise 1: nlp-mr
+
+1) Read through org-mode, up to "Eclipse"
+
+#+BEGIN_SRC sh
+cd $BDDIR/nlp-mr
+mvn 
+mvn -Declipse.workspace=/home/training/workspace/ \
+eclipse:configure-workspace
+vim pom.xml
+mvn eclipse:eclipse
+#+END_SRC
+
+- Refresh Eclipse
+- Explain Unit Tests
+- Perform Unit Tests
+- MapReduce Unit Tests
+- Configure Driver
+- Run Locally
+- HDFS DFS put the data
+- Run in MapReduce Mode
+- Show output
+
+* Exercise 2: avro
+
+1) Go through overview in README.org
+
+
+#+BEGIN_SRC bash
+cd $BDDIR/avro
+mvn eclipse:eclipse
+#+END_SRC
+
+Go into Eclipse, and then proceed with the Goal, and follow org-mode

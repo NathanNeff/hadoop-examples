@@ -1,0 +1,233 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+               "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+lang="en" xml:lang="en">
+<head>
+<title>README</title>
+<meta http-equiv="Content-Type" content="text/html;charset=iso-8859-1"/>
+<meta name="generator" content="Org-mode"/>
+<meta name="generated" content="2016-05-15 07:38:55 PDT"/>
+<meta name="author" content=""/>
+<style type="text/css">
+ <!--/*--><![CDATA[/*><!--*/
+  html { font-family: Times, serif; font-size: 12pt; }
+  .title  { text-align: center; }
+  .todo   { color: red; }
+  .done   { color: green; }
+  .tag    { background-color:lightblue; font-weight:normal }
+  .target { }
+  .timestamp { color: grey }
+  .timestamp-kwd { color: CadetBlue }
+  p.verse { margin-left: 3% }
+  pre {
+	border: 1pt solid #AEBDCC;
+	background-color: #F3F5F7;
+	padding: 5pt;
+	font-family: courier, monospace;
+        font-size: 90%;
+        overflow:auto;
+  }
+  table { border-collapse: collapse; }
+  td, th { vertical-align: top; }
+  dt { font-weight: bold; }
+  div.figure { padding: 0.5em; }
+  div.figure p { text-align: center; }
+  .linenr { font-size:smaller }
+  .code-highlighted {background-color:#ffff00;}
+  .org-info-js_info-navigation { border-style:none; }
+  #org-info-js_console-label { font-size:10px; font-weight:bold;
+                               white-space:nowrap; }
+  .org-info-js_search-highlight {background-color:#ffff00; color:#000000;
+                                 font-weight:bold; }
+  /*]]>*/-->
+</style>
+<script type="text/javascript">
+<!--/*--><![CDATA[/*><!--*/
+ function CodeHighlightOn(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(null != target) {
+     elem.cacheClassElem = elem.className;
+     elem.cacheClassTarget = target.className;
+     target.className = "code-highlighted";
+     elem.className   = "code-highlighted";
+   }
+ }
+ function CodeHighlightOff(elem, id)
+ {
+   var target = document.getElementById(id);
+   if(elem.cacheClassElem)
+     elem.className = elem.cacheClassElem;
+   if(elem.cacheClassTarget)
+     target.className = elem.cacheClassTarget;
+ }
+/*]]>*/-->
+</script>
+</head><body>
+<h1 class="title">README</h1>
+
+
+<div id="table-of-contents">
+<h2>Table of Contents</h2>
+<div id="text-table-of-contents">
+<ul>
+<li><a href="#sec-1">1 Exercise 2: Working with Avro Schemas </a>
+<ul>
+<li><a href="#sec-1.1">1.1 Part 1: Create Avro Schema and write Avro Data </a></li>
+<li><a href="#sec-1.2">1.2 Part 2: Using Avro Tools </a></li>
+<li><a href="#sec-1.3">1.3 Part 3: (Bonus) </a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-1" class="outline-2">
+<h2 id="sec-1">1 Exercise 2: Working with Avro Schemas </h2>
+<div id="text-1">
+
+
+
+
+<p>
+Exercise Directory : $BDDIR/avro
+Data : Part of the "avro" project 
+(in source code)  
+</p>
+
+
+</div>
+
+<div id="outline-container-1.1" class="outline-3">
+<h3 id="sec-1.1">1.1 Part 1: Create Avro Schema and write Avro Data </h3>
+<div id="text-1.1">
+
+
+<p>
+Create Avro Schemas, write Avro using Java code, read it using
+avro-tools
+</p>
+<ol>
+<li>
+Create an Avro schema with the following fields:
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+<col align="left"></col><col align="left"></col>
+<thead>
+<tr><th>Name</th><th>Type</th></tr>
+</thead>
+<tbody>
+<tr><td>activationTimestamp</td><td>long</td></tr>
+<tr><td>device<sub>type</sub></td><td>string</td></tr>
+<tr><td>acct<sub>num</sub></td><td>int</td></tr>
+<tr><td>device<sub>id</sub></td><td>string</td></tr>
+<tr><td>phone<sub>number</sub></td><td>string</td></tr>
+<tr><td>deviceModel</td><td>string</td></tr>
+</tbody>
+</table>
+
+
+</li>
+<li>
+Use the Maven POM to generate Java source code for Avro schemas
+<ul>
+<li>
+pom.xml (see <code>build</code> element near the bottom)
+
+</li>
+</ul>
+
+<p>$ mvn generate-sources   
+</p>
+</li>
+<li>
+Avro Java files adhere to the schema 
+Activation.java
+Device.java
+
+</li>
+<li>
+Write Unit Tests to adhere to the schema.  <b>Bonus</b> Add an
+optional field if desired
+
+</li>
+<li>
+Verify Unit Tests work
+
+</li>
+</ol>
+</div>
+
+</div>
+
+<div id="outline-container-1.2" class="outline-3">
+<h3 id="sec-1.2">1.2 Part 2: Using Avro Tools </h3>
+<div id="text-1.2">
+
+
+<ul>
+<li>
+View the AvroDeviceWriter class
+</li>
+<li>
+Generate data using the AvroDeviceWriter, <b>Bonus</b> both Snappy and
+uncompressed.  Save them as <b>old</b> files
+</li>
+<li>
+View the data using avro-tools
+</li>
+<li>
+Create a Reader for the Avro Data <b>NOTE</b> See
+
+<p>
+doc/examples/java-example/src/main/java/example/SpecificMain.java
+</p>
+<p>
+in the Avro Source Code:
+</p>
+<p>
+<a href="http://archive.cloudera.com/cdh5/cdh/5/avro-1.7.6-cdh5.4.5.tar.gz">http://archive.cloudera.com/cdh5/cdh/5/avro-1.7.6-cdh5.4.5.tar.gz</a>
+</p>
+<p>
+or
+</p>
+<p>
+<a href="http://search-hadoop.com/c/Avro:doc/examples/java-example/src/main/java/example/SpecificMain.java">http://search-hadoop.com/c/Avro:doc/examples/java-example/src/main/java/example/SpecificMain.java</a>
+</p>
+<p>
+<a href="https://github.com/apache/avro/blob/master/doc/examples/java-example/src/main/java/example/SpecificMain.java">https://github.com/apache/avro/blob/master/doc/examples/java-example/src/main/java/example/SpecificMain.java</a>
+</p>
+</li>
+</ul>
+</div>
+
+</div>
+
+<div id="outline-container-1.3" class="outline-3">
+<h3 id="sec-1.3">1.3 Part 3: (Bonus) </h3>
+<div id="text-1.3">
+
+
+<ul>
+<li>
+Add "battery" field and view with avro-tools
+<ul>
+<li>
+But, create Device2 schema
+</li>
+</ul>
+</li>
+<li>
+<b>Read</b> data using Java and avro-tools
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="postamble"><p class="author"> Author: 
+<a href="mailto:training@dev.loudacre.com">&lt;training@dev.loudacre.com&gt;</a>
+</p>
+<p class="date"> Date: 2016-05-15 07:38:55 PDT</p>
+<p>HTML generated by org-mode 6.21b in emacs 23</p>
+</div></body>
+</html>

@@ -1,0 +1,28 @@
+{
+  "type": "record",
+  "name": "Device",
+  "namespace": "com.loudacre.data",
+  "doc": "A device",
+  "fields": [
+    {
+      "name": "deviceName",
+      "type": "string"
+    },
+    {
+      "name": "deviceManufacturer",
+      "type": "string"
+    },
+    {
+      "name": "RAM",
+      "type": "int"
+    },
+    {
+      "name": "CPU",
+      "type": "float"
+    },
+    {
+      "name": "battery",
+      "type": "int"
+    }
+  ]
+}

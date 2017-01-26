@@ -1,0 +1,33 @@
+{
+  "type": "record",
+  "name": "Activation",
+  "namespace": "com.loudacre.data",
+  "doc": "An Activation of a user device",
+  "fields": [
+    {
+      "name": "activationTimestamp",
+      "type": "long"
+    },
+    {
+      "name": "deviceType",
+      "type": "string"
+    },
+    {
+      "name": "acct_num",
+      "type": "int"
+    },
+    {
+      "name": "device_id",
+      "type": "string"
+    },
+    {
+      "name": "phone_number",
+      "type": "string"
+    },
+    {
+      "name": "deviceModel",
+      "type": "string"
+    }
+  ]
+}
+

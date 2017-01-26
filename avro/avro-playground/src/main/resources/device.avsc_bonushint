@@ -1,0 +1,29 @@
+{
+  "type": "record",
+  "name": "Device",
+  "namespace": "com.loudacre.data",
+  "doc": "A device",
+  "fields": [
+    // TODO: Add the types for the fields
+    {
+      "name": "deviceName",
+      "type": "TODO"
+    },
+    {
+      "name": "deviceManufacturer",
+      "type": "TODO"
+    },
+    {
+      "name": "RAM",
+      "type": "TODO"
+    },
+    {
+      "name": "CPU",
+      "type": "TODO"
+    },
+    {
+      "name": "battery",
+      "type": "TODO"
+    }
+  ]
+}

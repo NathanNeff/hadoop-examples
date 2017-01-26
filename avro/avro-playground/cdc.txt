@@ -1,0 +1,26 @@
+
+FA
+	HDFS Sink:  "RollSize"  32 MB
+		    "RollInterval" 1 min
+
+	Sink -> hdfs://incoming/claims/june-28
+				west claims_1234234
+				east claims_5555944.tmp
+
+
+hdfs://incoming/claims/june-28/claims_4444445.tmp
+
+
+Oozie job
+	start:  hdfs mv incoming/claims/june-28
+	                in-process/claims/june-28
+	Spark Job -> 
+		read in-process/claims/june-28
+		     *MERGE WITH* hdfs://claims-june27
+		sanity-check data
+		output: new files to hdfs://claims/june-28
+    
+hdfs://claims/june-27
+``````file1, file2, ...
+		claim1   blah ts = june28
+		claim1   blah ts = june27

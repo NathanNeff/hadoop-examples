@@ -1,0 +1,33 @@
+{
+  "type": "record",
+  "name": "Activation",
+  "namespace": "com.loudacre.data",
+  "doc": "An Activation of a user device",
+  "fields": [
+    // TODO: Add the types for the fields
+    {
+      "name": "activationTimestamp",
+      "type": "TODO"
+    },
+    {
+      "name": "deviceType",
+      "type": "TODO"
+    },
+    {
+      "name": "acct_num",
+      "type": "TODO"
+    },
+    {
+      "name": "device_id",
+      "type": "TODO"
+    },
+    {
+      "name": "phone_number",
+      "type": "TODO"
+    },
+    {
+      "name": "deviceModel",
+      "type": "TODO"
+    }
+  ]
+}
