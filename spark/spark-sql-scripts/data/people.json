@@ -1,0 +1,4 @@
+{"name":"Bob",    "relatives": [ {"name":"Robert","rel":"dad"}, {"name":"Roberta","rel":"mother"}]}
+{"name":"Steve",  "relatives": [ {"name":"Steven","rel":"dad"}]}
+{"name":"Sharon", "relatives": [ {"name":"Ozzy","rel":"husband"}]}
+{"name":"Han Solo"}
