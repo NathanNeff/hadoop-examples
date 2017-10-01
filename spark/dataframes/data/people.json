@@ -1,4 +1,6 @@
-{ "firstName":"Julie", "testScore":30 }
-{ "firstName":"Aaron", "testScore":20 }
-{ "firstName":"Steve", "testScore":40 }
-{ "firstName":"Walter", "testScore":10 }
+{ "firstName":"Julie", "testScore":30, "studyTime":100 }
+{ "firstName":"Aaron", "testScore":20, "studyTime":200 }
+{ "firstName":"Steve", "testScore":40, "studyTime":300 }
+{ "firstName":"Walter", "testScore":10, "studyTime":400 }
+{ "firstName":"Josie", "testScore":30, "studyTime":500 }
+{ "firstName":"Willie", "testScore":10, "studyTime":600 }
