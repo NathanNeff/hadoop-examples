@@ -1,0 +1,6 @@
+{ "product":"Car", "price":2147483650 }
+{ "product":"Maxwell TV", "price":2147483648 }
+{ "product":"Radio", "price":2147483647 }
+{ "product":"Junk", "price":-2147483650 }
+{ "product":"Defunct", "price":-2147483647 }
+{ "product":"Mortgage", "price":-2147483646 }
