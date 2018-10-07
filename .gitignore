@@ -4,6 +4,7 @@
 *.pyc
 *.log
 *.*~
+metastore_db
 *.classpath
 *.project
 target/
