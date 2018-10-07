@@ -24,6 +24,14 @@ def printClusterHosts():
                         host = api.get_host(host_ref.hostId)
                         print host.hostname
                         
+def printHostTemplates(host_template_name):                        
+        for c in api.get_all_clusters():
+            print c.get_all_host_templates()
+            host_template = c.get_host_template(host_template_name)
+            if host_template is not None:
+                print "I found host template \"%s\":" % host_template_name
+                print host_template
 
 printClusterNames()
 printClusterHosts()
+printHostTemplates("ThisGuy")
