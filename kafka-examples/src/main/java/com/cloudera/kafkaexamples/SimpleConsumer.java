@@ -15,7 +15,7 @@ public class SimpleConsumer {
     // Set up client Java properties
     Properties props = new Properties();
     props.setProperty(ConsumerConfig.BOOTSTRAP_SERVERS_CONFIG,
-        "192.168.201.149:9092");
+        "quickstart.cloudera:9092");
     // Just a user-defined string to identify the consumer group
     props.put(ConsumerConfig.GROUP_ID_CONFIG, "test_consumer_group");
     // Enable auto offset commit

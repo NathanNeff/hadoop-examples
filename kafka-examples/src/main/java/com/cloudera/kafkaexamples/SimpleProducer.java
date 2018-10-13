@@ -16,7 +16,7 @@ public class SimpleProducer {
 
 		// Set up client Java properties
 		Properties props = new Properties();
-		props.setProperty(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG, "192.168.201.149:9092");
+		props.setProperty(ProducerConfig.BOOTSTRAP_SERVERS_CONFIG, "quickstart.cloudera:9092");
 
 		props.setProperty(ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG, StringSerializer.class.getName());
 		props.setProperty(ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG, StringSerializer.class.getName());
