@@ -61,21 +61,21 @@ public class SimpleConsumer {
     }
 
     // List of topics to subscribe to
-    KafkaConsumer<String, String> consumer = new KafkaConsumer<String, String>(props);
-    consumer.subscribe(Arrays.asList("ufo_sightings"));
-    while (true) {
-      try {
-
-        ConsumerRecords<String, String> records = consumer.poll(100);
-        for (ConsumerRecord<String, String> record : records) {
-          System.out.printf("Partition = %d\n", record.partition());
-          System.out.printf("Offset = %d\n", record.offset());
-          System.out.printf("Key    = %s\n", record.key());
-          System.out.printf("Value  = %s\n", record.value());
+    try (KafkaConsumer<String, String> consumer = new KafkaConsumer<>(props)) {
+      // List of topics to subscribe to
+      consumer.subscribe(Arrays.asList("ufo_sightings"));
+      while (true) {
+        try {
+          ConsumerRecords<String, String> records = consumer.poll(100);
+          for (ConsumerRecord<String, String> record : records) {
+            System.out.printf("Offset = %d\n", record.offset());
+            System.out.printf("Key    = %s\n", record.key());
+            System.out.printf("Value  = %s\n", record.value());
+          }
+        } catch (Exception e) {
+          e.printStackTrace();
         }
-      } catch (Exception e) {
-        e.printStackTrace();
-      } 
+      }
     }
   }
 }
