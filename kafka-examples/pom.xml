@@ -67,7 +67,6 @@
                 <version>1.4.0</version>
                 <configuration>
                     <executable>java</executable>
-                    <classpath/>
                 </configuration>
             </plugin>
             <plugin>
