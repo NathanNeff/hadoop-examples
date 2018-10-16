@@ -18,14 +18,23 @@ public class SimpleConsumer {
     // create Options object
     Options options = new Options();
 
-    Option option = Option.builder()
+    Option fromBeginningOption = Option.builder()
             .longOpt( "from-beginning" )
             .desc("Read topic from beginning")
             .hasArg(false)
             .argName("from-beginning")
             .build();
 
-    options.addOption(option);
+    options.addOption(fromBeginningOption);
+
+    Option groupOption = Option.builder()
+            .longOpt("group-id")
+            .desc("Consumer Group to Join")
+            .hasArg(true)
+            .argName("Consumer Group to Join (default is a UUID)")
+            .build();
+
+    options.addOption(groupOption);
 
     CommandLineParser parser = new DefaultParser();
     CommandLine cmd = null;
@@ -41,7 +50,6 @@ public class SimpleConsumer {
     props.setProperty(ConsumerConfig.BOOTSTRAP_SERVERS_CONFIG,
         "quickstart.cloudera:9092");
     // Just a user-defined string to identify the consumer group
-    props.put(ConsumerConfig.GROUP_ID_CONFIG, UUID.randomUUID().toString());
     // Enable auto offset commit
     props.put(ConsumerConfig.ENABLE_AUTO_COMMIT_CONFIG, "true");
     props.put(ConsumerConfig.AUTO_COMMIT_INTERVAL_MS_CONFIG, "1000");
@@ -50,6 +58,13 @@ public class SimpleConsumer {
     props.setProperty(ConsumerConfig.VALUE_DESERIALIZER_CLASS_CONFIG,
         StringDeserializer.class.getName());
 
+
+    if (null != cmd && cmd.hasOption("group-id")) {
+      props.put(ConsumerConfig.GROUP_ID_CONFIG, cmd.getOptionValue("group-id"));
+    }
+    else {
+      props.put(ConsumerConfig.GROUP_ID_CONFIG, UUID.randomUUID().toString());
+    }
 
     if (null != cmd && cmd.hasOption("from-beginning")) {
       // This is confusing versus using seekToBeginning(partitions).  The problem is we have not
