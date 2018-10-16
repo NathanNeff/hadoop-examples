@@ -9,6 +9,7 @@ import org.apache.kafka.clients.consumer.ConsumerRecords;
 import org.apache.kafka.clients.consumer.KafkaConsumer;
 import org.apache.kafka.common.serialization.StringDeserializer;
 
+import java.util.UUID;
 public class SimpleConsumer {
   public static void main(String[] args) {
 
@@ -17,7 +18,7 @@ public class SimpleConsumer {
     props.setProperty(ConsumerConfig.BOOTSTRAP_SERVERS_CONFIG,
         "quickstart.cloudera:9092");
     // Just a user-defined string to identify the consumer group
-    props.put(ConsumerConfig.GROUP_ID_CONFIG, "test_consumer_group");
+    props.put(ConsumerConfig.GROUP_ID_CONFIG, UUID.randomUUID().toString());
     // Enable auto offset commit
     props.put(ConsumerConfig.ENABLE_AUTO_COMMIT_CONFIG, "true");
     props.put(ConsumerConfig.AUTO_COMMIT_INTERVAL_MS_CONFIG, "1000");
