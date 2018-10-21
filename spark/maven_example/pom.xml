@@ -47,7 +47,7 @@
         <dependency>
             <groupId>org.scala-lang</groupId>
             <artifactId>scala-compiler</artifactId>
-            <version>2.10.4</version>
+            <version>FIXME-Make sure scala compiler is version 2.07 or higher</version>
         </dependency>
         <dependency>
             <groupId>org.scalatest</groupId>
