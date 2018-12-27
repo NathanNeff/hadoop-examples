@@ -18,6 +18,22 @@ public class SimpleConsumer {
         // create Options object
         Options options = new Options();
 
+        Option topicOption = Option.builder("topic")
+                .longOpt("topic")
+                .required(true)
+                .desc("Topic to subscribe to")
+                .hasArg(true)
+                .argName("topic").build();
+        options.addOption(topicOption);
+
+        Option bootstrapOption = Option.builder("bootstrapserver")
+                .longOpt("bootstrap-server")
+                .desc("Kafka brokers to use in bootstrap")
+                .required(true)
+                .hasArg(true)
+                .argName("bootstrap-server").build();
+        options.addOption(bootstrapOption);
+
         Option fromBeginningOption = Option.builder()
                 .longOpt("from-beginning")
                 .desc("Read topic from beginning")
@@ -48,7 +64,7 @@ public class SimpleConsumer {
         // Set up client Java properties
         Properties props = new Properties();
         props.setProperty(ConsumerConfig.BOOTSTRAP_SERVERS_CONFIG,
-                "quickstart.cloudera:9092");
+                cmd.getOptionValue(bootstrapOption.getOpt()));
         // Just a user-defined string to identify the consumer group
         // Enable auto offset commit
         props.put(ConsumerConfig.ENABLE_AUTO_COMMIT_CONFIG, "true");
@@ -76,8 +92,8 @@ public class SimpleConsumer {
 
         // List of topics to subscribe to
         try (KafkaConsumer<String, String> consumer = new KafkaConsumer<>(props)) {
-            // List of topics to subscribe to
-            consumer.subscribe(Arrays.asList("ufo_sightings"));
+            consumer.subscribe(Arrays.asList(cmd.getOptionValue(topicOption.getOpt())));
+
             while (true) {
                 try {
                     ConsumerRecords<String, String> records = consumer.poll(100);
