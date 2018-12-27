@@ -43,7 +43,7 @@ public class SimpleConsumer {
 
         options.addOption(fromBeginningOption);
 
-        Option groupOption = Option.builder()
+        Option groupOption = Option.builder("groupid")
                 .longOpt("group-id")
                 .desc("Consumer Group to Join")
                 .hasArg(true)
@@ -75,8 +75,8 @@ public class SimpleConsumer {
                 StringDeserializer.class.getName());
 
 
-        if (null != cmd && cmd.hasOption("group-id")) {
-            props.put(ConsumerConfig.GROUP_ID_CONFIG, cmd.getOptionValue("group-id"));
+        if (null != cmd && cmd.hasOption(groupOption.getOpt())) {
+            props.put(ConsumerConfig.GROUP_ID_CONFIG, cmd.getOptionValue(groupOption.getOpt()));
         } else {
             props.put(ConsumerConfig.GROUP_ID_CONFIG, UUID.randomUUID().toString());
         }
