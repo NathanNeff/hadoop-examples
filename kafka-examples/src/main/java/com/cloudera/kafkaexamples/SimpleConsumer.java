@@ -34,7 +34,7 @@ public class SimpleConsumer {
                 .argName("bootstrap-server").build();
         options.addOption(bootstrapOption);
 
-        Option fromBeginningOption = Option.builder()
+        Option fromBeginningOption = Option.builder("frombeginning")
                 .longOpt("from-beginning")
                 .desc("Read topic from beginning")
                 .hasArg(false)
@@ -81,18 +81,34 @@ public class SimpleConsumer {
             props.put(ConsumerConfig.GROUP_ID_CONFIG, UUID.randomUUID().toString());
         }
 
-        if (null != cmd && cmd.hasOption("from-beginning")) {
-            // This is confusing versus using seekToBeginning(partitions).  The problem is we have not
-            // been assigned any partitions yet, so seekToBeginning doesn't work without
-            // calling poll(0)
-            // See https://grokbase.com/t/kafka/users/16384874pk/seektobeginning-doesnt-work-without-auto-offset-reset
-            props.put(ConsumerConfig.AUTO_OFFSET_RESET_CONFIG, "earliest");
-            System.out.println("Setting to earliest");
-        }
-
         // List of topics to subscribe to
         try (KafkaConsumer<String, String> consumer = new KafkaConsumer<>(props)) {
-            consumer.subscribe(Arrays.asList(cmd.getOptionValue(topicOption.getOpt())));
+            if (null != cmd && cmd.hasOption(fromBeginningOption.getOpt())) {
+                /* 
+                 * This program does two things when "from-beginning" is specified:
+                 * 
+                 * 1) What to do if there are no tracked offsets for a particular group
+                 *    or partition.  "earliest", "latest", and none which will throw an 
+                 *    exception.  Setting "--from-beginning" tells this program to opt for
+                 *    "earliest" offset of a topic/partition if there is no tracked offset
+                 *    for this group.
+                 *    
+                 * 2) Seek To Beginning - We use an event listener which seeksToBeginning
+                 *    upon topic/partition assignments.
+                 * This is confusing versus using seekToBeginning(partitions).  The problem is we have not
+                 * been assigned any partitions yet, so seekToBeginning doesn't work without
+                 * calling poll(0)
+                 * See https://grokbase.com/t/kafka/users/16384874pk/seektobeginning-doesnt-work-without-auto-offset-reset
+                 */
+                props.put(ConsumerConfig.AUTO_OFFSET_RESET_CONFIG, "earliest");
+
+                System.out.println("Will seek to beginning, when topics/partitions are assigned.");
+                consumer.subscribe(Arrays.asList(cmd.getOptionValue(topicOption.getOpt())),
+                        new SeekToBeginningListener(consumer));
+            }
+            else {
+                consumer.subscribe(Arrays.asList(cmd.getOptionValue(topicOption.getOpt())));
+            }
 
             while (true) {
                 try {
