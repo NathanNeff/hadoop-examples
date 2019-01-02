@@ -1,4 +1,4 @@
-package com.cloudera.kafkaexamples;
+package hadoop.examples.kafka;
 
 import java.util.Collection;
 import java.util.Map.Entry;

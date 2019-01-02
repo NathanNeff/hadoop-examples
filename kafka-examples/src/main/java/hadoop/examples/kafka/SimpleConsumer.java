@@ -1,4 +1,4 @@
-package com.cloudera.kafkaexamples;
+package hadoop.examples.kafka;
 
 import java.io.PrintWriter;
 import java.util.Arrays;
