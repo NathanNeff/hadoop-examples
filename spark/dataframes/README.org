@@ -1,0 +1,6 @@
+* Installation
+
+Most of these examples use data from the "data" directory in this
+repository.  I recommend to run:
+
+    $ hdfs dfs -put data
