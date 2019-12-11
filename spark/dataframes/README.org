@@ -1,6 +1,6 @@
 * Installation
 
-Most of these examples use data from the "data" directory in this
+Most of these examples use data from the "hadoop-examples-data" directory in this
 repository.  I recommend to run:
 
-    $ hdfs dfs -put data
+    $ hdfs dfs -put hadoop-examples-data

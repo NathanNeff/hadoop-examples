@@ -1,5 +1,8 @@
+// See README.org for how to copy this data to HDFS
 // Put the json files in data subdirectory into HDFS prior to running this
-val jsonDF = spark.read.options(opts).json("maxVals.json")
+val maxValsData = "hadoop-examples-data/maxVals.json"
+
+val jsonDF = spark.read.options(opts).json(maxValsData)
 jsonDF.printSchema()
 // csvDF.show()
 
@@ -11,7 +14,7 @@ val columnsList = List(
 	StructField("price", StringType)
 )
 
-val jsonWithSchema = spark.read.schema(StructType(columnsList)).json("maxVals.json")
+val jsonWithSchema = spark.read.schema(StructType(columnsList)).json(maxValsData)
 jsonWithSchema.show()
 
 val columnsList = List(
@@ -20,7 +23,7 @@ val columnsList = List(
     StructField("_corrupt_record", StringType)
 )
 
-val jsonWithSchema = spark.read.schema(StructType(columnsList)).json("maxVals.json")
+val jsonWithSchema = spark.read.schema(StructType(columnsList)).json(maxValsData)
 jsonWithSchema.show()
 
 val columnsList = List(
@@ -28,5 +31,5 @@ val columnsList = List(
 	StructField("price", LongType)
 )
 
-val jsonWithLongSchema = spark.read.schema(StructType(columnsList)).json("maxVals.json")
+val jsonWithLongSchema = spark.read.schema(StructType(columnsList)).json(maxValsData)
 jsonWithLongSchema.show()
