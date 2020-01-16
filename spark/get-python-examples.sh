@@ -6,4 +6,8 @@ cd
 mkdir -p ~/python-examples && cd ~/python-examples
 tar -xzvf $PYTHON_EXAMPLES_FILE
 ls -lR
-echo Have fun!
+
+# Example of running code (Remove the # in front of spark-submit)
+# spark-submit als.py
+# 2>/dev/null is a quick and dirty add which silences noisy log messages
+# spark-submit pi.py 100 2>/dev/null
