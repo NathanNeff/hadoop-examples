@@ -22,7 +22,6 @@ SENSOR_RECORD_TYPE = StructType([
 
 NUM_MACHINES = 100
 
-SENSORS_PER_MACHINE = 10
 SENSORS = {
     "sensor_0" : [1, 5],
     "sensor_1" : [1, 20],
@@ -45,7 +44,7 @@ def random_sensor_reading():
     """
     err_code = 0
     machine = "host" + str(random.randint(1, NUM_MACHINES))
-    sensor_id = random.randint(1, SENSORS_PER_MACHINE)
+    sensor_id = random.randint(0, len(SENSORS) - 1)
     min_val, max_val = SENSORS.get("sensor_" + str(sensor_id))
 
     inject_error = False
