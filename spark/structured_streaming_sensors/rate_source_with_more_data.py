@@ -38,17 +38,13 @@ SENSORS = {
     "sensor_11" : [1, 10]
 }
 
-def create_random_machine(num_machines):
-    """
-    Udf to return a random machine
-    """
-    return "machine" + str(random.randint(1, num_machines))
-
-def create_random_sensor_reading():
+def random_sensor_reading():
     """
     Create random sensor reading from sensors.
     Inject errors (wacky values) randomly
     """
+    err_code = 0
+    machine = "host" + str(random.randint(1, NUM_MACHINES))
     sensor_id = random.randint(1, SENSORS_PER_MACHINE)
     min_val, max_val = SENSORS.get("sensor_" + str(sensor_id))
 
@@ -59,17 +55,20 @@ def create_random_sensor_reading():
     sensor_val = random.randint(min_val, max_val)
     if inject_error and random.randint(1, 100) < 80:
         sensor_val += random.randint(500, 1000)
+        err_code = random.randint(1, 10)
 
-    return sensor_val
+    return [machine, sensor_id, sensor_val, err_code]
 
 spark = SparkSession.builder.getOrCreate()
 
-random_sensor_reading = udf(create_random_sensor_reading, IntegerType())
+udf_random_sensor_reading = udf(random_sensor_reading, SENSOR_RECORD_TYPE)
 
 # read data from a set of streaming files
 rateDF = spark.readStream.format("rate").option("rowsPerSecond", 50).load()
-sensorDF = rateDF.withColumn("sensor_val", random_sensor_reading())
+sensorDF = rateDF.withColumn("sensor_struct", udf_random_sensor_reading())
+finalDF = sensorDF.select("timestamp", "sensor_struct.machine", "sensor_struct.sensor_id",
+                          "sensor_struct.sensor_value", "sensor_struct.err_code")
 
-rateQuery = sensorDF.writeStream.format("console").option("truncate", False).start()
+sensorQuery = finalDF.writeStream.format("console").option("truncate", False).start()
 
-# Call rateQuery.stop()
+# Call sensorQuery.stop()
