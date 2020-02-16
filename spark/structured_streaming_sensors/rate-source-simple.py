@@ -5,7 +5,7 @@ import random
 
 def main():
     # read data from a set of streaming files
-    rateDF = spark.readStream.format("rate").load()
+    rateDF = spark.readStream.format("rate").option("rowsPerSecond", 50).load()
     rateQuery = rateDF.writeStream.format("console").option("truncate", False).start()
     return rateQuery
 
