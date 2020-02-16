@@ -50,7 +50,7 @@ def create_random_sensor_reading():
 
 spark = SparkSession.builder.getOrCreate()
 
-random_sensor_reading = udf(create_random_sensor_reading)
+random_sensor_reading = udf(create_random_sensor_reading, IntegerType())
 
 # read data from a set of streaming files
 rateDF = spark.readStream.format("rate").option("rowsPerSecond", 50).load()
