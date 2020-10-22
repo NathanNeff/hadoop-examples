@@ -10,7 +10,7 @@ from pyspark.sql.functions import split, col
 # Create a DataFrame that #has 2 columns named Lat and Lon from the 4th and 5th
 # fields in the file
 
-filename = raw_input("Please enter the HDFS Directory where the data is located:")
+filename = input("Please enter the HDFS Directory where the data is located:")
 latLonDF = spark.read.csv(filename).\
 select(col('_c3').cast('float').alias('lat'),\
 col('_c4').cast('float').alias('lon'))\
@@ -33,7 +33,7 @@ km= KMeans(k=5,tol=.01,seed=12345, featuresCol="features")
 kmModel = km.fit(vectorDF)
 
 # Print out the cluster centers
-for center in kmModel.clusterCenters(): print center
+for center in kmModel.clusterCenters(): print(center)
 predictionDF = kmModel.transform(vectorDF)
 predictionDF.show()
 
