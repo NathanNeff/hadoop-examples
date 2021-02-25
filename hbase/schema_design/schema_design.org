@@ -131,8 +131,9 @@ https://hbase.apache.org/2.2/devapidocs/org/apache/hadoop/hbase/filter/FuzzyRowF
 
 * Benefits?
 
-A more even distribution of data
-More even distribution of calls to Region Servers:
+- Hopefully, resolution of Hotspots
+  - Perhaps better caching of data
+- More even distribution of RPC calls to Region Servers
 
 | Region Server 1 | Region Server 2 | RS 3 |
 | R1              | R2              | R3   |
@@ -141,5 +142,7 @@ More even distribution of calls to Region Servers:
 
 * Detractors?
 
-16 RPC calls (unless using Skip Scans)
+- 16 RPC calls (unless using Skip Scans)
+- More complex keys and code
+  
 
