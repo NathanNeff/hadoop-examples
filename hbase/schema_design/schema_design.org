@@ -27,3 +27,61 @@ Table "Quotes"
 |                | IBM:2015-05-01 | ts:2015-05-01       | price:40    |
 |                |                |                     |             |
 |                |                |                     |             |
+
+* Salted Keys
+
+
+data:
+
+| State | County      | date sampled | population |
+|-------+-------------+--------------+------------|
+| NY    | c1          |   2021-02-01 |       1000 |
+| NY    | c2          |   2021-02-02 |       2000 |
+| NY    | c3          |   2021-02-03 |        100 |
+| NY    | c4          |   2021-02-04 |        100 |
+| NY    | c5          |   2021-02-05 |      10000 |
+| NY    | c6          |   2021-02-06 |      13000 |
+| ....  |             |              |            |
+| NY    | c7          |   2021-02-03 |            |
+| CA    | walnut      |   2021-02-03 |            |
+| CA    | st. charles |              |            |
+| CA    | orange      |              |            |
+| RI    | etc         |              |            |
+| RI    | etc         |              |            |
+
+
+* Initial Scheme:  Using these keys hits only one RS
+
+| Key            | Region | State | County      | date sampled | population |
+|----------------+--------+-------+-------------+--------------+------------|
+| NY+c1          | R1     | NY    | c1          |   2021-02-01 |       1000 |
+| NY+c2          | R1     | NY    | c2          |   2021-02-02 |       2000 |
+| NY+c3          | R1     | NY    | c3          |   2021-02-03 |        100 |
+| NY+c4          | R1     | NY    | c4          |   2021-02-04 |        100 |
+| NY+c5          | R1     | NY    | c5          |   2021-02-05 |      10000 |
+| NY+c6          | R1     | NY    | c6          |   2021-02-06 |      13000 |
+| NY+c7          | R1     | NY    | c7          |   2021-02-03 |            |
+| CA+walnut      |        | CA    | walnut      |   2021-02-03 |            |
+| CA+st. charles |        | CA    | st. charles |              |            |
+| CA+orange      |        | CA    | orange      |              |            |
+| RI+etc         |        | RI    | etc         |              |            |
+| RI+etc         |        | RI    | etc         |              |            |
+
+
+* Possible Remedy:  SALT your keys
+
+- Decide on a number of buckets
+- Choose data having a reasonable distribution to compute your hash
+  (e.g. maybe not STATE, maybe STATE + CO)
+#+BEGIN_SRC python
+hash_buckets = 16
+for records in data:
+    key = hash(state + county, hash_buckets) + state + county
+
+# You might split table initially on buckets (you don't have to)
+# these would be hex codes instead of chars
+create 'population-statistics', { NAME => 'cfm' }, { SPLITS => '1', '2', '9' .. 'A', 'B', 'C', 'E' }
+
+#+END_SRC
+
+** New Scheme
