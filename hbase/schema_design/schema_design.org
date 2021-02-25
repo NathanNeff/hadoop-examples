@@ -7,7 +7,6 @@
 
 Table "Quotes"
 
-
 | Colfam         | Key            | Timestamp           | Field/Value |
 |----------------+----------------+---------------------+-------------|
 | Hourly         | IBM:2015-05-02 | ts:13:01            | price:41    |
@@ -73,6 +72,7 @@ data:
 - Decide on a number of buckets
 - Choose data having a reasonable distribution to compute your hash
   (e.g. maybe not STATE, maybe STATE + CO)
+  
 #+BEGIN_SRC python
 hash_buckets = 16
 for records in data:
@@ -80,8 +80,66 @@ for records in data:
 
 # You might split table initially on buckets (you don't have to)
 # these would be hex codes instead of chars
-create 'population-statistics', { NAME => 'cfm' }, { SPLITS => '1', '2', '9' .. 'A', 'B', 'C', 'E' }
-
+create 'population-statistics', { NAME => 'cfm' },
+    { SPLITS => '1', '2', '9' .. 'A', 'B', 'C', 'E' }
 #+END_SRC
 
-** New Scheme
+* New Scheme Results
+
+| Key                 | Region | State | County      | population | date sampled |
+|---------------------+--------+-------+-------------+------------+--------------|
+| 00 + NY+c0          | R1     | NY    | c0          |       1000 |   2021-02-01 |
+| 01 + NY+c1          | R2     | NY    | c1          |       1000 |   2021-02-01 |
+| 02 + NY+c2          | R2     | NY    | c2          |       2000 |   2021-02-02 |
+| 02 + NY+c3          | R2     | NY    | c3          |        100 |   2021-02-03 |
+| 0A + NY+c4          | R11    | NY    | c4          |        100 |   2021-02-04 |
+| 0A + CA+st. charles | R11    | CA    | st. charles |            |              |
+| 0B + NY+c5          | R12    | NY    | c5          |      10000 |   2021-02-05 |
+| 0C + NY+c6          | R13    | NY    | c6          |      13000 |   2021-02-06 |
+| 0D + NY+c7          | R14    | NY    | c7          |            |   2021-02-03 |
+| 0D + CA+walnut      | R14    | CA    | walnut      |            |   2021-02-03 |
+| 0E + CA+orange      | R15    | CA    | orange      |            |              |
+| 0E + RI+etc         | R15    | RI    | etc         |            |              |
+| 0F + NY + etc2      | R16    | NY    | etc2        |            |              |
+| 0F + RI + etc3      | R16    | RI    | etc3        |            |              |
+
+
+* Scanning these results would require:
+
+1) Knowing how many buckets there are
+2) Performing <number of buckets> scans
+3) Optionally using asynchronous calls
+4) See "Skip Scan" functionality later (Nate has a presentation which
+   he'll add to the class)
+
+
+for bucket in num_buckets:
+    (I forget how to use an INCLUSIVE END KEY, it's in the HBase
+    API docs)
+    scan 'population', STARTKEY = bucket + NY, ENDKEY = bucket + NY
+
+    
+*** You would "wrap" this logic in your applications
+
+***** See also Phoenix "Skip Scans"
+https://phoenix.apache.org/skip_scan.html
+
+***** See HBase's underlying Skip Scan:
+https://stackoverflow.com/questions/21527824/hbase-fuzzyrowfilter-how-jumping-of-keys-work
+https://hbase.apache.org/2.2/devapidocs/org/apache/hadoop/hbase/filter/FuzzyRowFilter.html
+
+
+* Benefits?
+
+A more even distribution of data
+More even distribution of calls to Region Servers:
+
+| Region Server 1 | Region Server 2 | RS 3 |
+| R1              | R2              | R3   |
+| R4              | R5              | R6   |
+| R7              | R8              | R9   |
+
+* Detractors?
+
+16 RPC calls (unless using Skip Scans)
+
