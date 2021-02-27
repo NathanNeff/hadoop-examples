@@ -11,3 +11,4 @@ metastore_db
 target/
 tags
 .settings
+index.html
