@@ -1,5 +1,14 @@
-# run this program in an existing PySpark shell
-# run hdfs dfs -put hadoop-examples-data prior to running this program
+# Experimenting with Spark's handling of duplicate column names
+# when joining dataframes.
+
+# Run this program in an existing PySpark shell
+# Reference
+# - Example in column_rename_after_joins.py
+# - https://sparkbyexamples.com/spark/rename-a-column-on-spark-dataframes/
+# - https://stackoverflow.com/questions/50287558/how-to-rename-duplicated-columns-after-join
+# - https://stackoverflow.com/questions/33778664/spark-dataframe-distinguish-columns-with-duplicated-name#33779190
+#   - References this KB article:  https://kb.databricks.com/data/join-two-dataframes-duplicated-columns.html
+
 
 from pyspark.sql import *
 from pyspark.sql.types import *
