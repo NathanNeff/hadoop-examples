@@ -12,7 +12,7 @@
   <url>http://maven.apache.org</url>
 
   <properties>
-    <hadoop.version>2.0.0-mr1-cdh4.2.1</hadoop.version>
+    <hadoop.version>2.7.0</hadoop.version>
     <!--hadoop.version>0.20.2-cdh4u5</hadoop.version-->
   </properties>
 
